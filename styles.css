@@ -92,7 +92,16 @@ h1 {
 }
 
 .role {
-  margin-top: 6px;
+  margin-top: 8px;
+  text-align: center;
+  color: var(--gold);
+  font-size: 13px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  letter-spacing: 0.08em;
+}
+
+.affiliation {
+  margin-top: 4px;
   text-align: center;
   color: var(--muted);
   font-size: 14px;
@@ -106,14 +115,19 @@ h1 {
 }
 
 .socials a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   color: var(--cream);
   font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   font-size: 12px;
   letter-spacing: 0.12em;
+  line-height: 1;
   text-transform: uppercase;
+}
+
+.socials span {
+  line-height: 1;
 }
 
 .socials a:hover {
@@ -141,13 +155,19 @@ section {
 h2 {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 12px;
   font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.18em;
+  line-height: 1;
   text-transform: uppercase;
+}
+
+h2 img {
+  width: 18px;
+  height: 18px;
 }
 
 section p,
@@ -155,10 +175,18 @@ section p,
   color: var(--cream);
 }
 
-.now-line {
+.keywords {
+  margin-top: 12px;
   font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  letter-spacing: 0.04em;
+  font-size: 12px;
+  letter-spacing: 0.03em;
   color: var(--gold);
+}
+
+.news img {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
 }
 
 .news {

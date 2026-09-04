@@ -43,6 +43,7 @@ FONT_5X7 = {
     "M": ["10001", "11011", "10101", "10101", "10001", "10001", "10001"],
     "N": ["10001", "11001", "10101", "10011", "10001", "10001", "10001"],
     "O": ["01110", "10001", "10001", "10001", "10001", "10001", "01110"],
+    "P": ["11110", "10001", "10001", "11110", "10000", "10000", "10000"],
     "R": ["11110", "10001", "10001", "11110", "10100", "10010", "10001"],
     "S": ["01111", "10000", "10000", "01110", "00001", "00001", "11110"],
     "T": ["11111", "00100", "00100", "00100", "00100", "00100", "00100"],
@@ -52,6 +53,9 @@ FONT_5X7 = {
     " ": ["00000", "00000", "00000", "00000", "00000", "00000", "00000"],
     "&": ["01000", "10100", "01000", "01101", "10010", "10010", "01101"],
     "-": ["00000", "00000", "00000", "11111", "00000", "00000", "00000"],
+    "/": ["00001", "00010", "00100", "01000", "10000", "00000", "00000"],
+    "V": ["10001", "10001", "10001", "10001", "10001", "01010", "00100"],
+    ".": ["00000", "00000", "00000", "00000", "00000", "01100", "01100"],
 }
 
 
@@ -236,6 +240,24 @@ ICONS_16 = {
         "................",
         "................",
     ],
+    "linkedin": [
+        "................",
+        ".cccccccccccccc.",
+        ".c............c.",
+        ".c..ccc.......c.",
+        ".c...c........c.",
+        ".c...c..cccc..c.",
+        ".c...c.c...c..c.",
+        ".c...c.c...c..c.",
+        ".c...c.c...c..c.",
+        ".c...c.c...c..c.",
+        ".c............c.",
+        ".cccccccccccccc.",
+        "................",
+        "................",
+        "................",
+        "................",
+    ],
 }
 
 
@@ -254,8 +276,14 @@ def make_icon_tile(name, scale=3):
     return scale_nn(tile, scale)
 
 
+def make_plain_icon(name, scale=2):
+    rows = ICONS_16[name]
+    sprite = parse_sprite(rows, {".": CLEAR, "c": CREAM})
+    return scale_nn(sprite, scale)
+
+
 def make_banner():
-    w, h = 240, 64
+    w, h = 256, 80
     img = new_canvas(w, h, INK)
 
     for x in range(w):
@@ -269,7 +297,6 @@ def make_banner():
         px(img, w - 2, y, SLATE)
         px(img, w - 1, y, GOLD)
 
-    # faint pixel grid, every 8
     for x in range(4, w - 4, 8):
         for y in range(4, h - 4, 8):
             px(img, x, y, DIM)
@@ -295,19 +322,24 @@ def make_banner():
         ],
         {".": CLEAR, "c": CREAM},
     )
-    paste(img, robot, 14, 22)
+    paste(img, robot, 12, 30)
 
     title = "YUKUN WANG"
     tw = text_width(title, scale=2, tracking=2)
-    tx = (w - tw) // 2 + 8
-    blit_text(img, title, tx, 16, CREAM, scale=2, tracking=2)
+    tx = (w - tw) // 2 + 10
+    blit_text(img, title, tx, 12, CREAM, scale=2, tracking=2)
 
-    sub = "ROBOTICS & AI"
-    sw = text_width(sub, scale=1, tracking=1)
-    sx = (w - sw) // 2 + 8
-    for x in range(sx - 6, sx + sw + 6):
-        px(img, x, 36, SLATE)
-    blit_text(img, sub, sx, 40, GOLD, scale=1, tracking=1)
+    school = "UCL MENG ROBOTICS & AI"
+    sw = text_width(school, scale=1, tracking=1)
+    sx = (w - sw) // 2 + 10
+    for x in range(sx - 4, sx + sw + 4):
+        px(img, x, 32, SLATE)
+    blit_text(img, school, sx, 36, GOLD, scale=1, tracking=1)
+
+    roles = "ROBOT LEARNING / EMBODIED AI"
+    rw = text_width(roles, scale=1, tracking=1)
+    rx = (w - rw) // 2 + 10
+    blit_text(img, roles, rx, 50, CREAM, scale=1, tracking=1)
 
     return scale_nn(img, 5)
 
@@ -337,8 +369,11 @@ def main():
 
     for name in ICONS_16:
         tile = make_icon_tile(name, scale=3)
+        plain = make_plain_icon(name, scale=2)
         write_png(tile, ICONS / f"{name}.png")
         write_png(tile, PROFILE_ICONS / f"{name}.png")
+        write_png(plain, ICONS / "plain" / f"{name}.png")
+        write_png(plain, PROFILE_ICONS / "plain" / f"{name}.png")
 
 
 if __name__ == "__main__":
