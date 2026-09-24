@@ -1,6 +1,6 @@
 # Yukun Wang — research portfolio
 
-Bilingual, video-led personal website. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
+Bilingual personal website preserving the original pixel-art banner, serif typography, compact layout, and gold-and-cream palette. Four selected project videos extend the existing design. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
 
 Static HTML, CSS, and JavaScript; no build step. English is the default. The language control saves the visitor's choice; `?lang=zh` and `?lang=en` provide direct links.
 
