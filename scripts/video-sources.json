@@ -1,0 +1,42 @@
+[
+  {
+    "id": "planning",
+    "source": "docs/briefs/handlingbox-data-collection-brief-20260722/videos/transfer_lower_level.mp4",
+    "source_seconds": 81.7667,
+    "output_seconds": 4.8,
+    "speed": 17.03,
+    "frames": 144,
+    "simulation": true,
+    "selected_example": true
+  },
+  {
+    "id": "recovery",
+    "source": "syntheticdatageneration/logs/autonomous_replanning_recovery_20260810/r131_first_correction_only_recording/20260810_035248/interventions/attempt-000/recovery-01/combined.mp4",
+    "source_seconds": 22.5167,
+    "output_seconds": 4.8,
+    "speed": 4.69,
+    "frames": 144,
+    "simulation": true,
+    "selected_example": true
+  },
+  {
+    "id": "upper",
+    "source": "docs/briefs/utars-techreport-20260922/media/上层_新评测/成功_2026080501.mp4",
+    "source_seconds": 14.4667,
+    "output_seconds": 4.8,
+    "speed": 3.01,
+    "frames": 144,
+    "simulation": true,
+    "selected_example": true
+  },
+  {
+    "id": "lower",
+    "source": "docs/briefs/utars-techreport-20260922/media/下层/成功_2026080507.mp4",
+    "source_seconds": 60.0,
+    "output_seconds": 4.8,
+    "speed": 12.5,
+    "frames": 144,
+    "simulation": true,
+    "selected_example": true
+  }
+]

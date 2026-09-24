@@ -1,95 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yukun Wang / 王宇堃</title>
-  <meta name="description" content="Yukun Wang — MEng Robotics & AI at UCL. Robot learning and embodied AI.">
+  <meta name="theme-color" content="#080d12">
+  <title>Yukun Wang — Robot Learning & Embodied AI</title>
+  <meta name="description" content="Yukun Wang, UCL Robotics & AI. Building robots that learn from demonstrations and act in the world. Selected work at UBTECH and Tsinghua IIIS × Zhongguancun Academy.">
+  <meta property="og:title" content="Yukun Wang — From demonstrations to autonomous action">
+  <meta property="og:description" content="Robot learning, autonomous manipulation, and music-driven motion. Explore selected projects and robot demonstrations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lbtwyk.github.io/">
+  <meta property="og:image" content="https://lbtwyk.github.io/assets/portfolio-cover.jpg">
+  <link rel="canonical" href="https://lbtwyk.github.io/">
   <link rel="icon" href="assets/icons/robot.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page">
-    <header class="top">
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-set-lang="zh" aria-pressed="false">中</button>
-      </div>
-    </header>
-
-    <img class="banner" src="assets/banner.png" width="1280" height="400" alt="Yukun Wang — UCL MEng Robotics &amp; AI, robot learning, embodied AI">
-
-    <h1>Yukun Wang / 王宇堃</h1>
-    <p class="role">
-      <span class="en">Robot Learning · Embodied AI</span>
-      <span class="zh">Robot Learning · Embodied AI</span>
-    </p>
-    <p class="affiliation">MEng Robotics &amp; AI @ <a href="https://www.ucl.ac.uk/">UCL</a></p>
-
-    <nav class="socials" aria-label="Links">
-      <a href="mailto:lambert.wang.23@ucl.ac.uk">
-        <img src="assets/icons/plain/mail.png" width="20" height="20" alt="">
-        <span>Mail</span>
-      </a>
-      <a href="https://github.com/lbtwyk">
-        <img src="assets/icons/plain/github.png" width="20" height="20" alt="">
-        <span>GitHub</span>
-      </a>
-      <a href="https://www.linkedin.com/in/yukun-wang-024120297/">
-        <img src="assets/icons/plain/linkedin.png" width="20" height="20" alt="">
-        <span>LinkedIn</span>
-      </a>
-    </nav>
-
-    <img class="divider" src="assets/divider.png" width="480" height="15" alt="">
-
-    <section>
-      <h2>
-        <img src="assets/icons/plain/about.png" width="18" height="18" alt="">
-        <span class="en">About</span>
-        <span class="zh">简介</span>
-      </h2>
-      <p class="en">Third-year MEng Robotics &amp; AI at University College London. I work on robot learning and embodied AI: VLA and diffusion policies, sim2real, world models, and multimodal control, from high-fidelity simulation to real robots.</p>
-      <p class="zh">伦敦大学学院（UCL）MEng Robotics &amp; AI 三年级。方向是 robot learning 与 embodied AI：VLA 与 diffusion policy、sim2real、world models、multimodal control，从高保真 simulation 做到真机。</p>
-      <p class="keywords">VLA · Diffusion Policy · sim2real · Isaac Sim · music-to-motion · world models</p>
-    </section>
-
-    <section>
-      <h2>
-        <img src="assets/icons/plain/now.png" width="18" height="18" alt="">
-        <span class="en">Now</span>
-        <span class="zh">正在做</span>
-      </h2>
-      <p class="en">Streaming dance generation for humanoid robots — music-to-motion, rhythm-aware conditioning, and causal streaming inference.</p>
-      <p class="zh">在做 humanoid 上的 streaming dance generation：music-to-motion、节奏条件、causal streaming inference。</p>
-    </section>
-
-    <section>
-      <h2>
-        <img src="assets/icons/plain/news.png" width="18" height="18" alt="">
-        <span class="en">News</span>
-        <span class="zh">动态</span>
-      </h2>
-      <ol class="news">
-        <li>
-          <img src="assets/icons/plain/robot.png" width="18" height="18" alt="">
-          <div>
-            <p class="when">2026 — Present · UBTECH</p>
-            <p class="en">Intern, Embodied Large Models and Cognitive Decision Department, Research Institute, R&amp;D System. VLA post-training, industrial deployment, and an Isaac Sim data pipeline for the Cruzr S1 robot.</p>
-            <p class="zh">优必选科技-研发体系-研究院-具身大模型与认知决策部。VLA post-training、industrial 场景 deployment，以及面向 Cruzr S1 的 Isaac Sim data pipeline。</p>
-          </div>
-        </li>
-        <li>
-          <img src="assets/icons/plain/research.png" width="18" height="18" alt="">
-          <div>
-            <p class="when">2025.06 — 2025.10 · Tsinghua IIIS × Zhongguancun Academy</p>
-            <p class="en">Research intern in embodied intelligence and sim-to-real: robot data, diffusion policy, and sim-real co-training.</p>
-            <p class="zh">清华 IIIS × 中关村学院研究助理，方向为 embodied intelligence 与 sim2real：真机数据、diffusion policy、sim-real co-training。</p>
-          </div>
-        </li>
-      </ol>
-    </section>
+<a class="skip" href="#work"><span class="en">Skip to selected work</span><span class="zh">跳转到精选作品</span></a>
+<header class="header">
+  <a class="wordmark" href="#top" aria-label="Yukun Wang, home">YW<span> / </span></a>
+  <nav aria-label="Main navigation">
+    <a href="#work"><span class="en">Work</span><span class="zh">作品</span></a>
+    <a href="#about"><span class="en">About</span><span class="zh">关于</span></a>
+    <a href="#contact"><span class="en">Contact</span><span class="zh">联系</span></a>
+  </nav>
+  <div class="language" role="group" aria-label="Language / 语言">
+    <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-set-lang="zh" aria-pressed="false">中</button>
   </div>
-  <script src="script.js"></script>
+</header>
+<main id="top">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="eyebrow"><span class="status-dot"></span><span class="en">Robot learning & embodied AI</span><span class="zh">机器人学习与具身智能</span></div>
+    <div class="hero-grid">
+      <div>
+        <p class="name">Yukun Wang <span>王宇堃</span></p>
+        <h1 id="hero-title"><span class="en">Building robots<br>that <em>learn.</em><br>And <em>act.</em></span><span class="zh">让机器人<br>从示范中<em>学习。</em><br>在行动中<em>完成任务。</em></span></h1>
+      </div>
+      <div class="hero-intro">
+        <span class="section-number">01 / INTRO</span>
+        <p class="en">Building robots that learn from demonstrations and act in the world.</p>
+        <p class="zh">连接示范、学习与行动，让机器人智能走进具体任务。</p>
+        <p class="hero-affiliation"><span class="en">Fourth-year MEng Robotics & AI<br>University College London</span><span class="zh">伦敦大学学院 UCL<br>机器人与人工智能本硕连读 · 四年级</span></p>
+        <a class="text-link" href="#work"><span class="en">Explore selected work</span><span class="zh">探索我的作品</span> <span aria-hidden="true">↘</span></a>
+      </div>
+    </div>
+    <div class="hero-film">
+      <video muted loop playsinline controls preload="metadata" poster="assets/posters/planning.jpg" width="1280" height="480" aria-label="UTars demonstration generation, simulation at 17.03 times speed / UTars 自动示范，仿真加速 17.03 倍"><source src="assets/videos/planning.mp4" type="video/mp4"></video>
+      <div class="hero-film-caption"><span><span class="live-dot"></span> UTARS / UBTECH</span><span class="en">Simulation · 17.03× speed</span><span class="zh">仿真 · 加速 17.03 倍</span><a href="#demos"><span class="en">Watch the films ↗</span><span class="zh">观看演示 ↗</span></a></div>
+    </div>
+    <div class="hero-foot"><span>UCL · UBTECH · TSINGHUA IIIS × ZHONGGUANCUN ACADEMY</span><span class="en">Selected research & engineering</span><span class="zh">研究与工程作品精选</span></div>
+  </section>
+
+  <section class="work wrap" id="work" aria-labelledby="work-title">
+    <div class="section-heading"><p class="eyebrow">01 — <span class="en">Featured work</span><span class="zh">重点作品</span></p><span class="section-number">UBTECH / 2026</span></div>
+    <div class="project-intro">
+      <h2 id="work-title"><span class="en">Demonstrate.<br>Recover. <em>Act.</em></span><span class="zh">生成示范。<br>自主纠错。<br><em>学会行动。</em></span></h2>
+      <div><p class="project-lead en">An end-to-end robot learning workflow for UTars.</p><p class="project-lead zh">面向 UTars，贯通机器人学习的完整流程。</p><p class="muted en">At UBTECH, I built an automated demonstration pipeline, developed recovery from off-nominal states, and connected robot learning with closed-loop manipulation in simulation.</p><p class="muted zh">在优必选，我构建自动示范生成流程，开发偏差状态下的恢复能力，并将机器人学习与仿真中的自主搬运连接起来。</p><div class="tags"><span>Robot Learning</span><span>Autonomous Manipulation</span><span>Simulation</span></div></div>
+    </div>
+    <div class="stats" aria-label="Project highlights / 项目亮点">
+      <div><strong>4</strong><span class="en">demonstration scenarios</span><span class="zh">类自动示范搬运场景</span></div>
+      <div><strong>1,000</strong><span class="en">demonstrations used for training</span><span class="zh">条用于训练的示范</span></div>
+      <div><strong class="stat-word"><span class="en">End to end</span><span class="zh">完整闭环</span></strong><span class="en">from demonstration to autonomous execution</span><span class="zh">从示范生成到模型自主执行</span></div>
+    </div>
+    <div class="demo-heading" id="demos"><h3><span class="en">Four moments. One bigger picture.</span><span class="zh">四个片段，看见完整能力。</span></h3><p class="muted"><span class="en">Selected simulation demonstrations · accelerated playback</span><span class="zh">仿真 · 精选演示 · 加速播放</span></p></div>
+    <div class="demo-grid">
+      <article class="demo-card" id="planning">
+        <div class="card-top"><span>01 / <span class="en">PLAN</span><span class="zh">规划</span></span><span class="speed">17.03×</span></div>
+        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/planning.jpg" width="1280" height="480" aria-label="Automated demonstration generation, simulation at 17.03 times speed / 自动规划数采，仿真加速 17.03 倍"><source src="assets/videos/planning.mp4" type="video/mp4"></video></div>
+        <div class="card-copy"><h4><span class="en">Plan autonomously.<br>Create demonstrations at scale.</span><span class="zh">自主规划，<br>规模化生成机器人示范。</span></h4><p class="en">Coordinated arms and body movement turn a cross-shelf transfer into a complete demonstration.</p><p class="zh">协调双臂与身体运动，自主完成跨货架搬运，生成完整任务示范。</p><span class="card-source"><span class="en">Demonstration generation · July 2026</span><span class="zh">自动示范生成 · 2026 年 7 月</span></span></div>
+      </article>
+      <article class="demo-card" id="recovery">
+        <div class="card-top"><span>02 / <span class="en">RECOVER</span><span class="zh">纠错</span></span><span class="speed">4.69×</span></div>
+        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/recovery.jpg" width="1280" height="624" aria-label="Autonomous recovery during demonstration collection, simulation at 4.69 times speed / 数采过程自主纠错，仿真加速 4.69 倍"><source src="assets/videos/recovery.mp4" type="video/mp4"></video></div>
+        <div class="card-copy"><h4><span class="en">Recover from a setback.<br>Keep the task moving.</span><span class="zh">从偏差中恢复，<br>让任务继续。</span></h4><p class="en">During demonstration collection, the robot replans from a failed grasp and continues through successful placement.</p><p class="zh">在示范采集过程中，从抓取失败后的实际状态重新规划，继续完成放置。</p><span class="card-source"><span class="en">Collection-time recovery · August 2026</span><span class="zh">数采过程恢复 · 2026 年 8 月</span></span></div>
+      </article>
+      <article class="demo-card" id="upper">
+        <div class="card-top"><span>03 / <span class="en">UPPER SHELF</span><span class="zh">上层执行</span></span><span class="speed">3.01×</span></div>
+        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/upper.jpg" width="1280" height="624" aria-label="Upper-shelf learned policy demonstration, simulation at 3.01 times speed / 上层模型自主执行，仿真加速 3.01 倍"><source src="assets/videos/upper.mp4" type="video/mp4"></video></div>
+        <div class="card-copy"><h4><span class="en">From visual understanding<br>to coordinated action.</span><span class="zh">从视觉理解，<br>到双臂协作。</span></h4><p class="en">A learned policy connects camera observations with coordinated manipulation, placing and releasing the box on the upper shelf.</p><p class="zh">学习后的策略根据视觉观测协调动作，在上层完成搬运、放置与松手。</p><span class="card-source"><span class="en">Learned policy · September 23, 2026</span><span class="zh">模型自主执行 · 2026 年 9 月 23 日</span></span></div>
+      </article>
+      <article class="demo-card" id="lower">
+        <div class="card-top"><span>04 / <span class="en">LOWER SHELF</span><span class="zh">下层执行</span></span><span class="speed">12.50×</span></div>
+        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/lower.jpg" width="1280" height="624" aria-label="Lower-shelf learned policy demonstration, simulation at 12.5 times speed / 下层模型自主执行，仿真加速 12.5 倍"><source src="assets/videos/lower.mp4" type="video/mp4"></video></div>
+        <div class="card-copy"><h4><span class="en">Coordinate the whole body.<br>Reach a different level.</span><span class="zh">协调全身，<br>完成跨层搬运。</span></h4><p class="en">The learned policy coordinates the arms, torso, and mobile base to carry the box down and release it on the lower shelf.</p><p class="zh">学习后的策略协调双臂、躯干与移动底盘，将箱子搬至下层并完成释放。</p><span class="card-source"><span class="en">Learned policy · September 18, 2026</span><span class="zh">模型自主执行 · 2026 年 9 月 18 日</span></span></div>
+      </article>
+    </div>
+    <div class="evidence-note"><span class="note-mark" aria-hidden="true">↳</span><p class="en">These are selected successful examples, not success-rate estimates. The upper- and lower-shelf policy evaluations completed 13/40 and 7/40 tasks respectively, under different task settings. Recovery is demonstrated in the collection pipeline.</p><p class="zh">以上为精选成功样例，不代表整体成功率。上层和下层模型评测分别完成 13/40 与 7/40 次任务，两者任务设置不同。纠错演示来自数采流程。</p></div>
+  </section>
+
+  <section class="research wrap" aria-labelledby="research-title">
+    <div class="section-heading"><p class="eyebrow">02 — <span class="en">Beyond manipulation</span><span class="zh">更多探索</span></p><span class="section-number">RESEARCH DIRECTIONS</span></div>
+    <h2 id="research-title"><span class="en">Learning meets <em>movement.</em></span><span class="zh">让学习，<em>化为动作。</em></span></h2>
+    <div class="research-grid">
+      <article class="research-card"><div class="motion-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="eyebrow"><span class="en">Ongoing research</span><span class="zh">正在探索</span></p><h3><span class="en">Music becomes motion.</span><span class="zh">让音乐成为动作。</span></h3><p class="muted en">Exploring streaming, music-conditioned dance generation for humanoid robots: connecting rhythm, expression, and continuous movement.</p><p class="muted zh">探索音乐驱动的人形机器人流式舞蹈生成，连接节奏、表达与连续动作。</p><div class="tags"><span>Music to Motion</span><span>Humanoid Robots</span></div></article>
+      <article class="research-card"><div class="transfer-art" aria-hidden="true"><span>SIM</span><i>↔</i><span>REAL</span></div><p class="eyebrow"><span class="en">Tsinghua IIIS × Zhongguancun Academy</span><span class="zh">清华 IIIS × 中关村学院</span></p><h3><span class="en">Learning across worlds.</span><span class="zh">让学习跨越虚实。</span></h3><p class="muted en">Worked on real-robot data, diffusion policies, and joint learning from simulation and real demonstrations to improve robot manipulation.</p><p class="muted zh">围绕真机数据、扩散策略与虚实联合学习开展研究，提升机器人的操作能力。</p><div class="tags"><span>Sim to Real</span><span>Robot Learning</span></div></article>
+    </div>
+    <div class="project-links"><span class="en">More selected projects</span><span class="zh">更多精选项目</span><a href="https://github.com/lbtwyk/babybench"><span class="en">Self-touch & embodied exploration</span><span class="zh">自触碰与具身探索</span> ↗</a><a href="https://github.com/lbtwyk/SignTutor"><span class="en">SignTutor · sign-language learning</span><span class="zh">SignTutor · 手语学习</span> ↗</a></div>
+  </section>
+
+  <section class="about wrap" id="about" aria-labelledby="about-title">
+    <div class="section-heading"><p class="eyebrow">03 — <span class="en">The person behind the work</span><span class="zh">关于我</span></p></div>
+    <div class="about-grid"><div><h2 id="about-title"><span class="en">Curious about intelligence.<br><em>Driven to build.</em></span><span class="zh">探索智能，<br><em>也把它做出来。</em></span></h2><p class="muted en">I'm Yukun, a fourth-year MEng Robotics & AI student at UCL. I work at the intersection of robot learning, embodied intelligence, and autonomous systems—with an interest in turning research ideas into working robot behaviors.</p><p class="muted zh">我是王宇堃，UCL 机器人与人工智能本硕连读四年级学生。我关注机器人学习、具身智能与自主系统，喜欢把研究想法变成机器人真正能执行的行为。</p></div>
+    <ol class="timeline"><li><span class="timeline-date">2026 — <span class="en">Present</span><span class="zh">至今</span></span><h3><span class="en">UBTECH</span><span class="zh">优必选科技</span></h3><p class="en">Research intern · Embodied Large Models & Cognitive Decision</p><p class="zh">研究实习 · 具身大模型与认知决策部</p></li><li><span class="timeline-date">2025.06 — 2025.10</span><h3><span class="en">Tsinghua IIIS ×<br>Zhongguancun Academy</span><span class="zh">清华 IIIS × 中关村学院</span></h3><p class="en">Research intern · Robot learning & sim-to-real</p><p class="zh">研究实习 · 机器人学习与虚实迁移</p></li><li><span class="timeline-date"><span class="en">Education</span><span class="zh">教育背景</span></span><h3>University College London</h3><p class="en">MEng Robotics & Artificial Intelligence · Fourth year</p><p class="zh">机器人与人工智能本硕连读 · 四年级</p></li></ol></div>
+  </section>
+  <section class="contact wrap" id="contact"><p class="eyebrow"><span class="en">Let's connect</span><span class="zh">保持联系</span></p><h2><span class="en">Let's build what<br>robots can do <em>next.</em></span><span class="zh">一起探索机器人的<br><em>下一种可能。</em></span></h2><a class="contact-email" href="mailto:lambert.wang.23@ucl.ac.uk">lambert.wang.23@ucl.ac.uk <span>↗</span></a><div class="social-links"><a href="https://github.com/lbtwyk">GitHub ↗</a><a href="https://www.linkedin.com/in/yukun-wang-024120297/">LinkedIn ↗</a></div></section>
+</main>
+<footer class="wrap"><span>© 2026 Yukun Wang / 王宇堃</span><a href="#top"><span class="en">Back to top ↑</span><span class="zh">返回顶部 ↑</span></a></footer>
 </body>
 </html>
