@@ -1,42 +1,101 @@
 [
   {
-    "id": "planning",
     "source": "docs/briefs/handlingbox-data-collection-brief-20260722/videos/transfer_lower_level.mp4",
+    "category": "collection",
+    "segments": [
+      [
+        0.0,
+        81.73333333333333,
+        144
+      ]
+    ],
+    "poster_frame": 100,
+    "id": "planning",
     "source_seconds": 81.7667,
+    "source_start_seconds": 0.0,
+    "source_end_seconds": 81.73333333333333,
+    "end_hold_seconds": 0.0,
     "output_seconds": 4.8,
-    "speed": 17.03,
     "frames": 144,
-    "simulation": true,
-    "selected_example": true
+    "simulation": true
   },
   {
+    "source": "syntheticdatageneration/logs/cross_level_boundary_recovery_20260811/r04d_lower_place_complete_video/20260811_072505/interventions/attempt-000/recovery-01/combined.mp4",
+    "category": "collection",
+    "segments": [
+      [
+        2.5,
+        7.5,
+        30
+      ],
+      [
+        7.5,
+        16.0,
+        30
+      ],
+      [
+        16.0,
+        43.0,
+        48
+      ],
+      [
+        43.0,
+        50.5,
+        27
+      ]
+    ],
+    "poster_frame": 20,
+    "cut_reason": "Show shelf-edge contact, loaded retreat, replanned insertion, release; exclude post-success tail.",
+    "evidence": "docs/experiments/EXP-20260811-utars-sdg-cross-level-boundary-recovery.md; r04d metadata: lower_insert_box_shelf_collision, outcome=success, recovery_accepted=true",
     "id": "recovery",
-    "source": "syntheticdatageneration/logs/autonomous_replanning_recovery_20260810/r131_first_correction_only_recording/20260810_035248/interventions/attempt-000/recovery-01/combined.mp4",
-    "source_seconds": 22.5167,
+    "source_seconds": 54.6,
+    "source_start_seconds": 2.5,
+    "source_end_seconds": 50.5,
+    "end_hold_seconds": 0.3,
     "output_seconds": 4.8,
-    "speed": 4.69,
     "frames": 144,
-    "simulation": true,
-    "selected_example": true
+    "simulation": true
   },
   {
-    "id": "upper",
     "source": "docs/briefs/utars-techreport-20260922/media/上层_新评测/成功_2026080501.mp4",
+    "category": "inference",
+    "segments": [
+      [
+        0.0,
+        8.6,
+        135
+      ]
+    ],
+    "poster_frame": 55,
+    "cut_reason": "End after placement and visible hand withdrawal, before repeated post-task arm motion.",
+    "id": "upper",
     "source_seconds": 14.4667,
+    "source_start_seconds": 0.0,
+    "source_end_seconds": 8.6,
+    "end_hold_seconds": 0.3,
     "output_seconds": 4.8,
-    "speed": 3.01,
     "frames": 144,
-    "simulation": true,
-    "selected_example": true
+    "simulation": true
   },
   {
-    "id": "lower",
     "source": "docs/briefs/utars-techreport-20260922/media/下层/成功_2026080507.mp4",
+    "category": "inference",
+    "segments": [
+      [
+        0.0,
+        49.6,
+        135
+      ]
+    ],
+    "poster_frame": 65,
+    "cut_reason": "End with the box released on the lower shelf and hands withdrawn; remove later free motion.",
+    "id": "lower",
     "source_seconds": 60.0,
+    "source_start_seconds": 0.0,
+    "source_end_seconds": 49.6,
+    "end_hold_seconds": 0.3,
     "output_seconds": 4.8,
-    "speed": 12.5,
     "frames": 144,
-    "simulation": true,
-    "selected_example": true
+    "simulation": true
   }
 ]

@@ -248,3 +248,7 @@ h4 { font-size: 16px; font-weight: 600; line-height: 1.45; margin-bottom: 10px; 
   h4 { font-size: 18px; }
   .socials { gap: 20px; }
 }
+
+.demo-group { margin-top: 24px; }
+.demo-group h3 { color: var(--gold); font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; font-weight: 600; line-height: 1.6; margin-bottom: 8px; }
+.group-description { font-size: 14px; margin-bottom: 14px; }

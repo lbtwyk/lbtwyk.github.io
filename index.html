@@ -62,28 +62,40 @@
       <p class="en">From automated demonstrations to autonomous action: an end-to-end robot learning workflow for UTars.</p>
       <p class="zh">从自动生成示范到自主执行：面向 UTars，贯通机器人学习的完整流程。</p>
       <p class="demo-note" id="demos"><span class="en">Simulation demonstrations</span><span class="zh">仿真演示</span></p>
-    <div class="demo-grid">
+      <section class="demo-group" id="collection" aria-labelledby="collection-title">
+        <h3 id="collection-title"><span class="en">Collection — Fully Automated</span><span class="zh">Collection — 全自动数采</span></h3>
+        <p class="group-description en">Fully automated planning, execution, and recovery generate robot demonstrations without manual teleoperation.</p>
+        <p class="group-description zh">全自动完成规划、执行与纠错，无需人工遥操作，持续生成机器人示范。</p>
+        <div class="demo-grid">
       <article class="demo-card" id="planning">
-        <div class="card-top"><span>01 / <span class="en">PLAN</span><span class="zh">规划</span></span></div>
+        <div class="card-top"><span><span class="en">PLAN</span><span class="zh">规划</span></span></div>
         <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/planning.jpg" width="1280" height="480" aria-label="Automated demonstration generation, simulation / 自动规划数采，仿真"><source src="assets/videos/planning.mp4" type="video/mp4"></video></div>
-        <div class="card-copy"><h4><span class="en">Plan autonomously.<br>Create demonstrations at scale.</span><span class="zh">自主规划，<br>规模化生成机器人示范。</span></h4><p class="en">Coordinated arms and body movement turn a cross-shelf transfer into a complete demonstration.</p><p class="zh">协调双臂与身体运动，自主完成跨货架搬运，生成完整任务示范。</p><span class="card-source"><span class="en">Demonstration generation · July 2026</span><span class="zh">自动示范生成 · 2026 年 7 月</span></span></div>
+        <div class="card-copy"><h4><span class="en">Plan autonomously.<br>Create demonstrations at scale.</span><span class="zh">自主规划，<br>规模化生成机器人示范。</span></h4><p class="en">Coordinated arms and body movement turn a cross-shelf transfer into a complete demonstration.</p><p class="zh">协调双臂与身体运动，自主完成跨货架搬运，生成完整任务示范。</p><span class="card-source"><span class="en">Collection · Automated planning</span><span class="zh">Collection · 自动规划</span></span></div>
       </article>
       <article class="demo-card" id="recovery">
-        <div class="card-top"><span>02 / <span class="en">RECOVER</span><span class="zh">纠错</span></span></div>
-        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/recovery.jpg" width="1280" height="624" aria-label="Autonomous recovery during demonstration collection, simulation / 数采过程自主纠错，仿真"><source src="assets/videos/recovery.mp4" type="video/mp4"></video></div>
-        <div class="card-copy"><h4><span class="en">Recover from a setback.<br>Keep the task moving.</span><span class="zh">从偏差中恢复，<br>让任务继续。</span></h4><p class="en">During demonstration collection, the robot replans from a failed grasp and continues through successful placement.</p><p class="zh">在示范采集过程中，从抓取失败后的实际状态重新规划，继续完成放置。</p><span class="card-source"><span class="en">Collection-time recovery · August 2026</span><span class="zh">数采过程恢复 · 2026 年 8 月</span></span></div>
+        <div class="card-top"><span><span class="en">RECOVER</span><span class="zh">纠错</span></span></div>
+        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/recovery.jpg?v=task-cut-2" width="1280" height="624" aria-label="Autonomous recovery during demonstration collection, simulation / 数采过程自主纠错，仿真"><source src="assets/videos/recovery.mp4?v=task-cut-2" type="video/mp4"></video></div>
+        <div class="card-copy"><h4><span class="en">Recover from a setback.<br>Keep the task moving.</span><span class="zh">从偏差中恢复，<br>让任务继续。</span></h4><p class="en">During automated collection, the robot detects shelf contact, retreats with the box, and replans the approach to complete placement.</p><p class="zh">自动数采中，机器人碰到货架后保持抓取、后退，重新规划送入路线并完成放置。</p><span class="card-source"><span class="en">Collection · Automated recovery</span><span class="zh">Collection · 自动纠错</span></span></div>
       </article>
+        </div>
+      </section>
+      <section class="demo-group" id="inference" aria-labelledby="inference-title">
+        <h3 id="inference-title"><span class="en">Inference — Autonomous Decision-Making</span><span class="zh">Inference — 完全自主决策</span></h3>
+        <p class="group-description en">Given a task instruction, the model observes the scene, makes its own action decisions, and executes the task autonomously.</p>
+        <p class="group-description zh">接收任务指令后，模型根据观测自主决定动作，独立完成任务执行。</p>
+        <div class="demo-grid">
       <article class="demo-card" id="upper">
-        <div class="card-top"><span>03 / <span class="en">UPPER SHELF</span><span class="zh">上层执行</span></span></div>
-        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/upper.jpg" width="1280" height="624" aria-label="Upper-shelf learned policy demonstration, simulation / 上层模型自主执行，仿真"><source src="assets/videos/upper.mp4" type="video/mp4"></video></div>
-        <div class="card-copy"><h4><span class="en">From visual understanding<br>to coordinated action.</span><span class="zh">从视觉理解，<br>到双臂协作。</span></h4><p class="en">A learned policy connects camera observations with coordinated manipulation, placing and releasing the box on the upper shelf.</p><p class="zh">学习后的策略根据视觉观测协调动作，在上层完成搬运、放置与松手。</p><span class="card-source"><span class="en">Learned policy · September 23, 2026</span><span class="zh">模型自主执行 · 2026 年 9 月 23 日</span></span></div>
+        <div class="card-top"><span><span class="en">UPPER SHELF</span><span class="zh">上层执行</span></span></div>
+        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/upper.jpg?v=task-cut-2" width="1280" height="624" aria-label="Upper-shelf learned policy demonstration, simulation / 上层模型自主执行，仿真"><source src="assets/videos/upper.mp4?v=task-cut-2" type="video/mp4"></video></div>
+        <div class="card-copy"><h4><span class="en">From visual understanding<br>to coordinated action.</span><span class="zh">从视觉理解，<br>到双臂协作。</span></h4><p class="en">A learned policy connects camera observations with coordinated manipulation, placing and releasing the box on the upper shelf.</p><p class="zh">学习后的策略根据视觉观测协调动作，在上层完成搬运、放置与松手。</p><span class="card-source"><span class="en">Inference · Autonomous decisions</span><span class="zh">Inference · 自主决策</span></span></div>
       </article>
       <article class="demo-card" id="lower">
-        <div class="card-top"><span>04 / <span class="en">LOWER SHELF</span><span class="zh">下层执行</span></span></div>
-        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/lower.jpg" width="1280" height="624" aria-label="Lower-shelf learned policy demonstration, simulation / 下层模型自主执行，仿真"><source src="assets/videos/lower.mp4" type="video/mp4"></video></div>
-        <div class="card-copy"><h4><span class="en">Coordinate the whole body.<br>Reach a different level.</span><span class="zh">协调全身，<br>完成跨层搬运。</span></h4><p class="en">The learned policy coordinates the arms, torso, and mobile base to carry the box down and release it on the lower shelf.</p><p class="zh">学习后的策略协调双臂、躯干与移动底盘，将箱子搬至下层并完成释放。</p><span class="card-source"><span class="en">Learned policy · September 18, 2026</span><span class="zh">模型自主执行 · 2026 年 9 月 18 日</span></span></div>
+        <div class="card-top"><span><span class="en">LOWER SHELF</span><span class="zh">下层执行</span></span></div>
+        <div class="film"><video muted loop playsinline controls preload="none" poster="assets/posters/lower.jpg?v=task-cut-2" width="1280" height="624" aria-label="Lower-shelf learned policy demonstration, simulation / 下层模型自主执行，仿真"><source src="assets/videos/lower.mp4?v=task-cut-2" type="video/mp4"></video></div>
+        <div class="card-copy"><h4><span class="en">Coordinate the whole body.<br>Reach a different level.</span><span class="zh">协调全身，<br>完成跨层搬运。</span></h4><p class="en">The learned policy coordinates the arms, torso, and mobile base to carry the box down and release it on the lower shelf.</p><p class="zh">学习后的策略协调双臂、躯干与移动底盘，将箱子搬至下层并完成释放。</p><span class="card-source"><span class="en">Inference · Autonomous decisions</span><span class="zh">Inference · 自主决策</span></span></div>
       </article>
-    </div>
+        </div>
+      </section>
     </section>
 
     <section>

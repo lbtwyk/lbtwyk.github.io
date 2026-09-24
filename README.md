@@ -12,7 +12,7 @@ Run `python3 -m http.server 8000` from this repository and open `http://localhos
 
 Four simulation films, each 144 frames / 4.8 seconds at 30 fps, H.264, no audio. Videos loop when visible, preserve a visitor's pause, and do not autoplay when reduced motion is requested.
 
-`scripts/video-sources.json` records original evidence references, durations, and speed factors. Regenerate from the original workspace using a Python environment with PyAV and Pillow:
+`scripts/video-sources.json` records original evidence references, categories, source cut ranges, timing segments, and final-frame holds. Regenerate from the original workspace using a Python environment with PyAV and Pillow:
 
 ```sh
 python scripts/prepare_videos.py /path/to/original/workspace
@@ -21,3 +21,9 @@ python scripts/prepare_videos.py /path/to/original/workspace
 The original recordings are unchanged. Recovery belongs to the demonstration collection pipeline; upper/lower model execution clips come from separate September evaluations. Full-batch results remain in the original technical report.
 
 The technical report dated September 23, 2026 takes precedence over older resume stage scores for the UBTECH project. Education and research experience follow the latest resume. No private report, model, dataset, or resume PDF is published here.
+
+## Collection and inference
+
+Collection is the fully automated planner/collector: cross-shelf demonstration generation and shelf-edge collision recovery. The recovery film uses the accepted r04d lower-insertion collision trajectory, preserving contact, retreat, replanning, and final release.
+
+Inference is the learned policy making action decisions from observations and a task instruction. The upper and lower films end after release and visible hand withdrawal, before unrelated post-task motion. Source cut endpoints are 8.6 seconds and 49.6 seconds; originals are retained. A short final-frame hold makes the completed placement visible without retaining the subsequent motion. Public labels describe capabilities, not export timing or dataset counts.
