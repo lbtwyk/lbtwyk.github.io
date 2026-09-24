@@ -232,7 +232,6 @@ html[data-lang="zh"] body {
 
 /* Project demonstrations extend the original compact, gold-and-cream style. */
 a:focus-visible, button:focus-visible, video:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-.demo-note { margin: 18px 0 14px; font-size: 11px; }
 .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .demo-card { border: 1px solid var(--slate); min-width: 0; scroll-margin-top: 20px; }
 .card-top { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 10px; letter-spacing: .06em; color: var(--gold); }
@@ -241,7 +240,6 @@ a:focus-visible, button:focus-visible, video:focus-visible { outline: 2px solid 
 .card-copy { padding: 14px; }
 h4 { font-size: 16px; font-weight: 600; line-height: 1.45; margin-bottom: 10px; }
 .card-copy p { font-size: 13px; line-height: 1.65; color: var(--cream); margin-bottom: 12px; }
-.card-source { display: block; border-top: 1px solid var(--slate); padding-top: 9px; font-size: 10px; color: var(--muted); }
 @media (max-width: 520px) {
   .demo-grid { grid-template-columns: 1fr; }
   .card-copy { padding: 16px; }

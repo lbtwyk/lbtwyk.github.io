@@ -57,21 +57,22 @@
     "simulation": true
   },
   {
-    "source": "docs/briefs/utars-techreport-20260922/media/上层_新评测/成功_2026080501.mp4",
+    "source": "0.logs/n17_v3_batch_eval/20260923_upper_8f8_40ep/same_shelf_same_level/runs/full_policy/merged/videos/episode_027/combined.mp4",
     "category": "inference",
     "segments": [
       [
         0.0,
-        8.6,
+        10.6,
         135
       ]
     ],
-    "poster_frame": 55,
-    "cut_reason": "End after placement and visible hand withdrawal, before repeated post-task arm motion.",
+    "poster_frame": 75,
+    "cut_reason": "Successful seed 2026080608: more level lift and clean placement; end after release/withdrawal before post-task arm motion.",
+    "evidence": "20260923_upper_8f8_40ep: actual_completion=true, strict_stage_success=true; maximum pick tilt 10.477 degrees; final tilt 2.013 degrees.",
     "id": "upper",
-    "source_seconds": 14.4667,
+    "source_seconds": 15.0,
     "source_start_seconds": 0.0,
-    "source_end_seconds": 8.6,
+    "source_end_seconds": 10.6,
     "end_hold_seconds": 0.3,
     "output_seconds": 4.8,
     "frames": 144,

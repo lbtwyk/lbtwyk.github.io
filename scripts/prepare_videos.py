@@ -24,9 +24,10 @@ specs = {
         'evidence': 'docs/experiments/EXP-20260811-utars-sdg-cross-level-boundary-recovery.md; r04d metadata: lower_insert_box_shelf_collision, outcome=success, recovery_accepted=true',
     },
     'upper': {
-        'source': 'docs/briefs/utars-techreport-20260922/media/上层_新评测/成功_2026080501.mp4',
-        'category': 'inference', 'segments': [[0.0, 8.6, 135]], 'poster_frame': 55,
-        'cut_reason': 'End after placement and visible hand withdrawal, before repeated post-task arm motion.',
+        'source': '0.logs/n17_v3_batch_eval/20260923_upper_8f8_40ep/same_shelf_same_level/runs/full_policy/merged/videos/episode_027/combined.mp4',
+        'category': 'inference', 'segments': [[0.0, 10.6, 135]], 'poster_frame': 75,
+        'cut_reason': 'Successful seed 2026080608: more level lift and clean placement; end after release/withdrawal before post-task arm motion.',
+        'evidence': '20260923_upper_8f8_40ep: actual_completion=true, strict_stage_success=true; maximum pick tilt 10.477 degrees; final tilt 2.013 degrees.',
     },
     'lower': {
         'source': 'docs/briefs/utars-techreport-20260922/media/下层/成功_2026080507.mp4',
