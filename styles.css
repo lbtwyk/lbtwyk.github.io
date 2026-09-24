@@ -232,8 +232,6 @@ html[data-lang="zh"] body {
 
 /* Project demonstrations extend the original compact, gold-and-cream style. */
 a:focus-visible, button:focus-visible, video:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-.highlights { margin-top: 12px; font-size: 14px; }
-.highlights strong { color: var(--gold); }
 .demo-note { margin: 18px 0 14px; font-size: 11px; }
 .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .demo-card { border: 1px solid var(--slate); min-width: 0; scroll-margin-top: 20px; }
