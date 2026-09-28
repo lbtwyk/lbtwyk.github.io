@@ -250,3 +250,8 @@ h4 { font-size: 16px; font-weight: 600; line-height: 1.45; margin-bottom: 10px; 
 .demo-group { margin-top: 24px; }
 .demo-group h3 { color: var(--gold); font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; font-weight: 600; line-height: 1.6; margin-bottom: 8px; }
 .group-description { font-size: 14px; margin-bottom: 14px; }
+
+.entry-title { font-size: 17px; font-weight: 600; margin-bottom: 8px; line-height: 1.5; }
+.project-status { color: var(--gold); margin-bottom: 10px; font-size: 13px; }
+.internship + .internship { margin-top: 32px; }
+#work > p:first-child { margin-top: 12px; }
