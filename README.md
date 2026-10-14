@@ -27,3 +27,10 @@ The technical report dated September 23, 2026 takes precedence over older resume
 Collection is the fully automated planner/collector: cross-shelf demonstration generation and shelf-edge collision recovery. The recovery film uses the accepted r04d lower-insertion collision trajectory, preserving contact, retreat, replanning, and final release.
 
 Inference is the learned policy making action decisions from observations and a task instruction. The upper and lower films end after release and visible hand withdrawal, before unrelated post-task motion. The upper clip uses successful seed 2026080604 from the latest September 23 upper evaluation, selected for visually balanced left/right movement; it still has pitch during lifting. Source cut endpoints are 8.0 seconds and 49.6 seconds; originals are retained. A short final-frame hold makes the completed placement visible without retaining the subsequent motion. Public labels describe capabilities, not export timing or dataset counts.
+
+## Resume demo sections (2026-10-14)
+
+- `?lang=zh#tsinghua`: two real-robot excerpts from user-supplied `rl-co-introduction.mp4`: 98.000–123.296296 s and 123.296296–143.111111 s. Original task/comparison/speed labels retained; narration removed for standalone playback. H.264 MP4 with fast-start metadata.
+- `?lang=zh#ubtech`: existing four simulation demonstrations, unchanged.
+- `?lang=zh#foredance`: clearly labelled video placeholder, ready for the user's upcoming demo.
+- Checked six videos load in Chrome and mobile layout has no horizontal overflow.

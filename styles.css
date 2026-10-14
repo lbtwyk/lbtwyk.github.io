@@ -255,3 +255,9 @@ h4 { font-size: 16px; font-weight: 600; line-height: 1.45; margin-bottom: 10px; 
 .project-status { color: var(--gold); margin-bottom: 10px; font-size: 13px; }
 .internship + .internship { margin-top: 32px; }
 #work > p:first-child { margin-top: 12px; }
+
+.demo-placeholder{margin-top:16px;aspect-ratio:16/9;display:grid;place-items:center;border:1px dashed var(--slate);color:var(--muted);background:#121318;font-size:14px}
+.tsinghua-demos{margin-top:18px;grid-template-columns:1fr}
+.tsinghua-demos .film video{aspect-ratio:16/9}
+.demo-note{font-size:12px;color:var(--muted);margin-top:10px}
+#foredance,#tsinghua,#ubtech{scroll-margin-top:24px}
