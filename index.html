@@ -45,17 +45,17 @@
 <span class="en">About</span>
 <span class="zh">简介</span>
 </h2>
-<p class="en">Fourth-year MEng Robotics and Artificial Intelligence student at UCL, graduating in 2027, and a researcher in the Humanoid Robotics Lab, led by Associate Professor Chengxu Zhou. My research focuses on multimodal humanoid motion generation, whole-body control, and vision-language-action models (VLAs). I work across robot data collection, sim-real co-training, reinforcement learning, streaming inference, and deployment, with research experience at Tsinghua IIIS and UBTECH.</p>
-<p class="zh">UCL MEng Robotics and Artificial Intelligence 硕士第四年在读，预计 2027 年毕业，现于 Chengxu Zhou 副教授的 Humanoid Robotics Lab 开展研究。研究聚焦多模态人形机器人动作生成、全身控制与视觉—语言—动作模型（VLA），覆盖机器人数据采集、虚实联合训练、强化学习、流式推理与部署，曾在清华大学交叉信息研究院和优必选开展具身智能研究。</p>
-<p class="keywords">Multimodal Motion · Whole-Body Control · VLA · Robot Learning · Sim-to-Real</p>
+<p class="en">I study Robotics &amp; AI at UCL and research in the Humanoid Robotics Lab. I work on how robots generate expressive motion, coordinate their whole body, and turn visual and language cues into action.</p>
+<p class="zh">我在 UCL 学习 Robotics &amp; AI，并在人形机器人实验室开展研究。关注机器人如何生成富有表现力的动作、协调全身运动，并将视觉与语言转化为行动。</p>
+<p class="keywords"><span class="en">Multimodal Motion Generation · Whole-Body Control · VLA</span><span class="zh">多模态动作生成 · 全身控制 · VLA</span></p>
 </section>
 <section aria-labelledby="projects-title" id="projects">
 <h2 id="projects-title"><img alt="" height="18" src="assets/icons/plain/now.png" width="18"/><span class="en">Projects</span><span class="zh">项目</span></h2>
 <article id="foredance">
 <h3 class="entry-title"><span class="en">ForeDance · Multimodal Streaming Motion for Humanoid Robots</span><span class="zh">ForeDance · 多模态条件驱动的人形机器人流式动作生成</span></h3>
 <p class="project-status"><span class="en">Research in progress · UCL Humanoid Robotics Lab</span><span class="zh">研究进行中 · UCL Humanoid Robotics Lab</span></p>
-<p class="en">A streaming motion-generation framework for Unitree G1, connecting multimodal conditioning with whole-body execution. Hierarchical diffusion generates root trajectories and full-body poses, while a discrete–continuous motion representation preserves movement structure and amplitude. Training with model-generated history reduces drift during long sequences; asynchronous inference and a SONIC whole-body control interface connect generation to execution. The current system uses music anticipation, with text instructions and keyframe constraints planned as additional controls.</p>
-<p class="zh">面向 Unitree G1 构建流式动作生成框架，连接多模态条件与全身执行。通过分层扩散生成根轨迹和全身体态，以离散—连续协同表示保持动作结构与幅度；引入模型生成历史训练，缓解长序列动作漂移，并通过异步推理与 SONIC 全身控制接口衔接生成和执行。当前以音乐前瞻为条件，计划引入文本指令与关键帧约束，扩展动作的交互与控制方式。</p>
+<p class="en">Streaming humanoid motion generation for Unitree G1, connected to whole-body control. Music-conditioned today; text and keyframe guidance are next.</p>
+<p class="zh">面向 Unitree G1 的流式动作生成，衔接全身控制。当前以音乐为条件，下一步引入文本与关键帧引导。</p>
 <div class="demo-placeholder"><span class="en">Demo video coming soon</span><span class="zh">演示视频即将更新</span></div>
 </article>
 </section>
@@ -63,43 +63,43 @@
 <h2 id="internships-title"><img alt="" height="18" src="assets/icons/plain/news.png" width="18"/><span class="en">Internships</span><span class="zh">实习经历</span></h2>
 <article class="internship" id="ubtech">
 <h3 class="entry-title"><span class="en">Jun — Oct 2026 · UBTECH</span><span class="zh">2026 年 6 月 — 10 月 · 优必选科技</span></h3>
-<p class="en">VLA / Embodied AI Algorithm Intern · Embodied Large Models and Cognitive Decision Department</p>
-<p class="zh">VLA 具身智能算法实习生 · 具身大模型与认知决策部</p>
+<p class="en">VLA / Embodied AI Algorithm Intern</p>
+<p class="zh">VLA 具身智能算法实习生</p>
 <div id="work">
-<p class="en">Developed a data-to-policy workflow for the UTars dual-arm mobile robot: automated demonstration generation in Isaac Sim, embodiment adaptation and post-training of GR00T and LingBot-VLA, and closed-loop simulation evaluation. Combined coordinated whole-body planning, recovery replanning, asynchronous action chunks, and selective FP8 inference optimization.</p>
-<p class="zh">面向 UTars 双臂移动机器人，贯通 Isaac Sim 自动化示范生成、GR00T 与 LingBot-VLA 具身映射及后训练、闭环仿真验证。结合全身协同规划、自主纠错重规划、异步动作块执行与 Selective FP8 推理优化，连接数据生产、策略学习和机器人执行。</p>
+<p class="en">From automated demonstrations to VLA policies: teaching the UTars dual-arm mobile robot to manipulate and recover in simulation.</p>
+<p class="zh">从自动生成示范到 VLA 策略，让 UTars 双臂移动机器人在仿真中学会操作与自主纠错。</p>
 <div id="demos"></div>
 <section aria-labelledby="collection-title" class="demo-group" id="collection">
 <h3 id="collection-title"><span class="en">Automated Demonstration Generation</span><span class="zh">自动化示范生成</span></h3>
-<p class="group-description en">Coupled dual-arm IK and constrained whole-body planning automate trajectory generation, execution, and selection. Recovery replanning continues interrupted tasks and recycles corrective motions into training demonstrations.</p>
-<p class="group-description zh">结合双臂耦合 IK 与全身约束规划，自动完成轨迹生成、执行与筛选；通过纠错重规划续接受扰任务，将恢复过程回收为训练示范。</p>
+<p class="group-description en">Generate demonstrations through coordinated planning and autonomous recovery.</p>
+<p class="group-description zh">通过协同规划与自主纠错，自动生成机器人示范。</p>
 <div class="demo-grid">
 <article class="demo-card" id="planning">
 <div class="card-top"><span><span class="en">PLAN</span><span class="zh">规划</span></span></div>
 <div class="film"><video aria-label="Automated demonstration generation, simulation / 自动规划数采，仿真" controls="" height="480" loop="" muted="" playsinline="" poster="assets/posters/planning.jpg" preload="none" width="1280"><source src="assets/videos/planning.mp4" type="video/mp4"/></video></div>
-<div class="card-copy"><h4><span class="en">Coordinated planning at scale</span><span class="zh">全身协同规划与自动数采</span></h4><p class="en">Coordinate the arms and body through a shelf-transfer task, producing a complete demonstration without step-by-step teleoperation.</p><p class="zh">协调双臂与身体完成货架搬运，自动生成完整任务示范，替代逐步人工遥操作。</p></div>
+<div class="card-copy"><h4><span class="en">Coordinated planning at scale</span><span class="zh">全身协同规划与自动数采</span></h4><p class="en">Complete shelf transfers without step-by-step teleoperation.</p><p class="zh">自动完成货架搬运，替代逐步人工遥操作。</p></div>
 </article>
 <article class="demo-card" id="recovery">
 <div class="card-top"><span><span class="en">RECOVER</span><span class="zh">纠错</span></span></div>
 <div class="film"><video aria-label="Autonomous recovery during demonstration collection, simulation / 数采过程自主纠错，仿真" controls="" height="624" loop="" muted="" playsinline="" poster="assets/posters/recovery.jpg?v=task-cut-2" preload="none" width="1280"><source src="assets/videos/recovery.mp4?v=task-cut-2" type="video/mp4"/></video></div>
-<div class="card-copy"><h4><span class="en">Recover and resume the task</span><span class="zh">自主恢复，续接原任务</span></h4><p class="en">After shelf contact, the robot maintains its grasp, retreats, and replans the approach to complete placement during automated collection.</p><p class="zh">数采过程中遇到货架碰撞后，机器人保持抓取并后退，重新规划送入路径，继续完成放置。</p></div>
+<div class="card-copy"><h4><span class="en">Recover and resume the task</span><span class="zh">自主恢复，续接原任务</span></h4><p class="en">Retreat, replan, and finish placement after shelf contact.</p><p class="zh">碰撞后退让、重规划，继续完成放置。</p></div>
 </article>
 </div>
 </section>
 <section aria-labelledby="inference-title" class="demo-group" id="inference">
 <h3 id="inference-title"><span class="en">Closed-Loop VLA Execution</span><span class="zh">VLA 闭环自主执行</span></h3>
-<p class="group-description en">A post-trained policy maps task instructions and visual observations to coordinated actions. The demonstrations below show closed-loop execution in simulation.</p>
-<p class="group-description zh">后训练策略将任务指令与视觉观测转化为协同动作，以下展示在仿真环境中的闭环执行。</p>
+<p class="group-description en">Task instructions and visual observations drive closed-loop actions in simulation.</p>
+<p class="group-description zh">根据任务指令与视觉观测，在仿真中闭环执行。</p>
 <div class="demo-grid">
 <article class="demo-card" id="upper">
 <div class="card-top"><span><span class="en">UPPER SHELF</span><span class="zh">上层执行</span></span></div>
 <div class="film"><video aria-label="Upper-shelf learned policy demonstration, simulation / 上层模型自主执行，仿真" controls="" height="624" loop="" muted="" playsinline="" poster="assets/posters/upper.jpg?v=latest-upper-0604" preload="none" width="1280"><source src="assets/videos/upper.mp4?v=latest-upper-0604" type="video/mp4"/></video></div>
-<div class="card-copy"><h4><span class="en">Visual policy for upper-shelf placement</span><span class="zh">视觉策略驱动上层放置</span></h4><p class="en">Use camera observations to coordinate dual-arm transport, placement, and release on the upper shelf.</p><p class="zh">根据相机观测协调双臂，在上层货架完成搬运、放置与释放。</p></div>
+<div class="card-copy"><h4><span class="en">Visual policy for upper-shelf placement</span><span class="zh">视觉策略驱动上层放置</span></h4><p class="en">Use vision to place and release the box on the upper shelf.</p><p class="zh">根据视觉观测，在上层货架放置并释放箱子。</p></div>
 </article>
 <article class="demo-card" id="lower">
 <div class="card-top"><span><span class="en">LOWER SHELF</span><span class="zh">下层执行</span></span></div>
 <div class="film"><video aria-label="Lower-shelf learned policy demonstration, simulation / 下层模型自主执行，仿真" controls="" height="624" loop="" muted="" playsinline="" poster="assets/posters/lower.jpg?v=task-cut-2" preload="none" width="1280"><source src="assets/videos/lower.mp4?v=task-cut-2" type="video/mp4"/></video></div>
-<div class="card-copy"><h4><span class="en">Whole-body coordination across shelf levels</span><span class="zh">全身协调完成跨层搬运</span></h4><p class="en">Coordinate the arms, torso, and mobile base to transfer the box to the lower shelf and release it.</p><p class="zh">协调双臂、躯干与移动底盘，将箱子转移至下层货架并完成释放。</p></div>
+<div class="card-copy"><h4><span class="en">Whole-body coordination across shelf levels</span><span class="zh">全身协调完成跨层搬运</span></h4><p class="en">Coordinate arms, torso, and base to reach the lower shelf.</p><p class="zh">协调双臂、躯干与底盘，完成下层放置。</p></div>
 </article>
 </div>
 </section>
@@ -107,11 +107,11 @@
 </article>
 <article class="internship" id="tsinghua">
 <h3 class="entry-title"><span class="en">Jun — Oct 2025 · Tsinghua IIIS × Zhongguancun Academy</span><span class="zh">2025 年 6 月 — 10 月 · 清华 IIIS × 中关村学院</span></h3>
-<p class="en">Research Assistant · Visual Policy Learning and Sim-Real Co-Training. Built real-robot data and digital-twin workflows for Diffusion Policy, with visual style transfer for sim-to-real deployment. Developed an OpenVLA co-training pipeline that combines real demonstrations, simulation-based reinforcement learning, and imitation regularization for data-efficient adaptation and generalization.</p>
-<p class="zh">研究助理 · 视觉策略学习与虚实联合训练。围绕 Diffusion Policy 构建真机数据与数字孪生流程，通过视觉风格转换实现虚实迁移；围绕 OpenVLA 联合真实示范、仿真强化学习与模仿学习正则，开展低样本策略优化与泛化验证。</p>
+<p class="en">Learning manipulation from real and simulated experience. Research on Diffusion Policy deployment and OpenVLA sim-real co-training for data-efficient adaptation.</p>
+<p class="zh">让机器人从虚实经验中学习操作。研究 Diffusion Policy 真机部署与 OpenVLA 虚实联合训练，提升低样本适应能力。</p>
 <div class="demo-grid tsinghua-demos">
-<article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Real-robot manipulation / 真机多任务执行" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-tasks.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-tasks.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Real-robot manipulation</span><span class="zh">真机多任务执行</span></h4><p class="en">Real-robot execution across pick-and-place, pushing, and drawer opening and closing.</p><p class="zh">展示抓取放置、推方块及抽屉开合等任务中的真机执行。</p></div></article>
-<article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Generalization comparison / 泛化能力对比" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-generalization.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-generalization.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Generalization beyond training conditions</span><span class="zh">训练场景外的泛化表现</span></h4><p class="en">Compare supervised co-training and reinforcement-learning-based sim-real co-training on familiar and unseen conditions.</p><p class="zh">对比监督联合训练与强化学习虚实联合训练在已见及未见条件下的执行表现。</p></div></article>
+<article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Real-robot manipulation / 真机多任务执行" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-tasks.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-tasks.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Real-robot manipulation</span><span class="zh">真机多任务执行</span></h4><p class="en">Pick, place, push, and operate drawers.</p><p class="zh">抓取、放置、推动与抽屉开合。</p></div></article>
+<article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Generalization comparison / 泛化能力对比" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-generalization.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-generalization.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Generalization beyond training conditions</span><span class="zh">训练场景外的泛化表现</span></h4><p class="en">Compare co-training strategies on familiar and unseen conditions.</p><p class="zh">比较不同联合训练策略在已见与未见条件下的表现。</p></div></article>
 </div>
 </article>
 </section>
