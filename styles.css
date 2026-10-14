@@ -267,3 +267,6 @@ h4 { font-size: 16px; font-weight: 600; line-height: 1.45; margin-bottom: 10px; 
 .identity-panel .socials{margin-top:0;padding:19px 14px;border:1px solid var(--slate);border-top:0;background:#101115}
 .identity-panel .banner{display:block}
 .identity-panel + .divider{margin-top:24px}
+
+.foredance-demo{margin-top:16px}
+.foredance-demo .film video{aspect-ratio:16/9}

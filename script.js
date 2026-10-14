@@ -18,7 +18,7 @@
   });
 
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  const videos = [...document.querySelectorAll('video')];
+  const videos = [...document.querySelectorAll('video:not([data-manual-play])')];
   const states = new Map(videos.map(video => [video, { visible: false, manuallyPaused: false, programmaticPause: false }]));
   function pause(video) {
     if (!video.paused) {

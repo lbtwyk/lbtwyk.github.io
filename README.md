@@ -38,3 +38,7 @@ Inference is the learned policy making action decisions from observations and a 
 ## Copy refresh (2026-10-14)
 
 Bilingual profile, ForeDance, internship introductions, demo captions, keywords, and search/share descriptions align with the current CV. Focus: multimodal motion generation, whole-body control, VLA, and sim-to-real learning. Text/keyframe conditioning remains explicitly planned. Video assets and anchors are unchanged. English and Chinese layouts checked at 1050 px and 390 px without horizontal overflow.
+
+## ForeDance song-switch demo (2026-10-14)
+
+Replaced the ForeDance placeholder with the user-supplied `train_switch_slow_a_seed1234.mp4`: full 60 seconds, 1920×1080, original H.264 video and AAC audio retained without re-encoding. Fast-start container and a poster added. User-initiated playback preserves audio; this video is excluded from viewport autoplay. Existing internship videos are unchanged. Local Chrome playback and 390 px mobile layout verified.
