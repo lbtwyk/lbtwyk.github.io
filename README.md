@@ -42,3 +42,5 @@ Bilingual profile, ForeDance, internship introductions, demo captions, keywords,
 ## ForeDance song-switch demo (2026-10-14)
 
 Replaced the ForeDance placeholder with the user-supplied `train_switch_slow_a_seed1234.mp4`: full 60 seconds, 1920×1080, original H.264 video and AAC audio retained without re-encoding. Fast-start container and a poster added. User-initiated playback preserves audio; this video is excluded from viewport autoplay. Existing internship videos are unchanged. Local Chrome playback and 390 px mobile layout verified.
+
+2026-10-15: Replaced the ForeDance clip with user-supplied `foredance-diff展示.mp4`, showing generated reference and SONIC execution side by side. Retained the full 60 seconds and original video/audio streams; refreshed poster and media cache versions.
