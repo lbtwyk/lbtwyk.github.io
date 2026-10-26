@@ -44,3 +44,7 @@ Bilingual profile, ForeDance, internship introductions, demo captions, keywords,
 Replaced the ForeDance placeholder with the user-supplied `train_switch_slow_a_seed1234.mp4`: full 60 seconds, 1920×1080, original H.264 video and AAC audio retained without re-encoding. Fast-start container and a poster added. User-initiated playback preserves audio; this video is excluded from viewport autoplay. Existing internship videos are unchanged. Local Chrome playback and 390 px mobile layout verified.
 
 2026-10-15: Replaced the ForeDance clip with user-supplied `foredance-diff展示.mp4`, showing generated reference and SONIC execution side by side. Retained the full 60 seconds and original video/audio streams; refreshed poster and media cache versions.
+
+## aheadance update (2026-10-26)
+
+Public project name is `aheadance`. Chinese and English copy follows the approved CV, with concise streaming generation and whole-body control descriptions, 90.6 ms generation per 0.53 s motion and user-confirmed ~0.8 s real-robot end-to-end latency. Text/keyframe conditioning remains planned. The existing demo is labelled simulation; all media and analytics are retained. `#aheadance` is the current anchor and `#foredance` remains compatible with existing CV links.
