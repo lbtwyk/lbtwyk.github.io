@@ -318,3 +318,33 @@ html[data-lang="en"] #news .news p.zh, html[data-lang="zh"] #news .news p.en { d
   .hero #education { order: 4; margin-top: 32px; }
   .feature-text { order: -1; }
 }
+
+/* Portrait and institution marks (2026-10-29): photos keep smooth scaling; marks sit on cream chips with pixel borders. */
+.portrait, .org-chip img, .utars img { image-rendering: auto; }
+.profile { display: grid; grid-template-columns: 148px minmax(0, 1fr); gap: 24px; align-items: start; margin-top: 24px; }
+.portrait { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border: 2px solid var(--slate); box-shadow: 6px 6px 0 var(--slate); }
+.hero-left .profile #education { margin-top: 0; }
+.org-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
+.org-chip { display: inline-flex; align-items: center; height: 42px; padding: 7px 10px; background: var(--cream); border: 2px solid var(--slate); }
+.org-chip.square { padding: 3px; }
+.org-chip img { display: block; height: 100%; width: auto; mix-blend-mode: multiply; }
+.utars { margin-top: 18px; display: flex; align-items: flex-end; gap: 14px; }
+.utars img { display: block; height: 180px; width: auto; }
+.utars figcaption { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--muted); padding-bottom: 6px; }
+@media (max-width: 900px) {
+  .hero .profile { order: 2; margin-top: 24px; }
+  .hero #about { order: 3; }
+  .hero #news { order: 4; }
+  .profile { grid-template-columns: 128px minmax(0, 1fr); gap: 18px; }
+}
+@media (max-width: 520px) {
+  .profile { grid-template-columns: 104px minmax(0, 1fr); gap: 14px; }
+  .portrait { box-shadow: 4px 4px 0 var(--slate); }
+  .org-chip { height: 36px; padding: 6px 8px; }
+  .utars img { height: 140px; }
+}
+.org-chip { height: 46px; }
+.org-chip.wide { padding: 5px 12px; }
+.org-chip.zgca { padding: 12px 14px; }
+.org-chip.square { padding: 2px; }
+@media (max-width: 520px) { .org-chip { height: 40px; } .org-chip.zgca { padding: 10px 12px; } }

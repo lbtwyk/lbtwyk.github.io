@@ -56,3 +56,8 @@ Keeps the original pixel-art banner, gold-and-cream palette and demo cards. Adds
 ## Wide layout (2026-10-29)
 
 Same palette, pixel banner and demo cards, rearranged to cut scrolling: a two-column header (identity and education beside about and news), AHEADance with its video beside the text, and each internship with text on the left and its demos on the right (UBTECH 2×2, Tsinghua side by side). Below 900 px everything stacks in reading order (identity, about, news, education; project text before its video). Checked at 1440, 1024, 820 and 390 px in both languages: no horizontal overflow, all anchors present, all seven videos load.
+
+## Portrait and institution marks (2026-10-29)
+
+- `assets/portrait.jpg` sits beside Education in the hero (moves right under the nameplate on phones), framed with the slate border and pixel offset shadow.
+- `assets/logos/` holds the UCL, UBTECH, Tsinghua and ZGCA marks plus the UTars robot picture, cropped from the resume's source files (see `assets/logos/SOURCES.md`). Marks sit on cream chips so dark or purple artwork stays readable on the dark page; photos and marks opt out of the global pixelated image scaling.
