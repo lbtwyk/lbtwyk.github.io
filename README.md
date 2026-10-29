@@ -61,3 +61,7 @@ Same palette, pixel banner and demo cards, rearranged to cut scrolling: a two-co
 
 - `assets/portrait.jpg` sits beside Education in the hero (moves right under the nameplate on phones), framed with the slate border and pixel offset shadow.
 - `assets/logos/` holds the UCL, UBTECH, Tsinghua and ZGCA marks plus the UTars robot picture, cropped from the resume's source files (see `assets/logos/SOURCES.md`). Marks sit on cream chips so dark or purple artwork stays readable on the dark page; photos and marks opt out of the global pixelated image scaling.
+
+## Chinese banner (2026-10-29)
+
+`assets/banner-zh.png` is the Chinese nameplate (王宇堃 · UCL Robotics & AI 本硕连读 · 机器人学习 / 具身智能) on the same frame, dot grid and robot. It is drawn by `make_banner_zh()` in `scripts/generate_assets.py` with macOS's built-in 16 px bitmap font (`NISC18030.ttf`, no antialiasing) so the glyphs stay true pixels; the page shows it in place of `banner.png` when Chinese is selected.

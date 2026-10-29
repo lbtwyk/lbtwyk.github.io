@@ -3,7 +3,7 @@
 
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
@@ -344,6 +344,83 @@ def make_banner():
     return scale_nn(img, 5)
 
 
+# macOS ships one true 16 px bitmap CJK font; render it without antialiasing.
+CJK_FONT = "/System/Library/Fonts/Supplemental/NISC18030.ttf"
+CJK_SIZE = 16
+
+
+def cjk_mask(text, bold=False):
+    font = ImageFont.truetype(CJK_FONT, CJK_SIZE)
+    mask = Image.new("L", (CJK_SIZE * len(text) + 2, CJK_SIZE + 2), 0)
+    draw = ImageDraw.Draw(mask)
+    draw.fontmode = "1"
+    draw.text((0, 0), text, fill=255, font=font)
+    if bold:
+        draw.text((1, 0), text, fill=255, font=font)
+    return mask.crop(mask.getbbox())
+
+
+def blit_mask(img, mask, x, y, color):
+    for j in range(mask.height):
+        for i in range(mask.width):
+            if mask.getpixel((i, j)):
+                px(img, x + i, y + j, color)
+
+
+def blit_mixed(img, parts, x, y, line_h=CJK_SIZE):
+    """Draw (text, color, is_cjk) parts on one baseline-centred line; returns end x."""
+    cursor = x
+    for text, color, is_cjk in parts:
+        if is_cjk:
+            mask = cjk_mask(text)
+            blit_mask(img, mask, cursor, y + (line_h - mask.height) // 2, color)
+            cursor += mask.width + 6
+        else:
+            end = blit_text(img, text, cursor, y + (line_h - 7) // 2, color)
+            cursor = end + 5
+    return cursor - 6
+
+
+def mixed_width(parts):
+    probe = new_canvas(512, 32, CLEAR)
+    return blit_mixed(probe, parts, 0, 0)
+
+
+def make_banner_zh():
+    """Chinese nameplate on the same frame, dot grid and robot as the English banner."""
+    w, h = 256, 80
+    img = make_banner().resize((w, h), Image.NEAREST)
+    # Clear the English text area, keeping frame, dots and robot.
+    for x in range(30, w - 4):
+        for y in range(4, h - 4):
+            px(img, x, y, INK)
+    for x in range(28, w - 4, 8):
+        for y in range(4, h - 4, 8):
+            px(img, x, y, DIM)
+
+    # Name at 2x like the English title, glyph by glyph with the same wide tracking.
+    glyphs = [scale_nn(cjk_mask(ch).convert("RGBA"), 2).getchannel("R") for ch in "王宇堃"]
+    tw = sum(g.width for g in glyphs) + 8 * (len(glyphs) - 1)
+    tx = (w - tw) // 2 + 10
+    for g in glyphs:
+        blit_mask(img, g, tx, 5 + (30 - g.height) // 2, CREAM)
+        tx += g.width + 8
+
+    school = [("UCL ROBOTICS & AI", GOLD, False), ("本硕连读", GOLD, True)]
+    sw = mixed_width(school)
+    sx = (w - sw) // 2 + 10
+    for x in range(sx - 4, sx + sw + 4):
+        px(img, x, 39, SLATE)
+    blit_mixed(img, school, sx, 42, line_h=15)
+
+    roles = [("机器人学习", CREAM, True), ("/", CREAM, False), ("具身智能", CREAM, True)]
+    rw = mixed_width(roles)
+    rx = (w - rw) // 2 + 10
+    blit_mixed(img, roles, rx, 60, line_h=15)
+
+    return scale_nn(img, 5)
+
+
 def make_divider():
     w, h = 160, 5
     img = new_canvas(w, h, CLEAR)
@@ -363,6 +440,7 @@ def main():
     banner = make_banner()
     divider = make_divider()
     write_png(banner, ASSETS / "banner.png")
+    write_png(make_banner_zh(), ASSETS / "banner-zh.png")
     write_png(divider, ASSETS / "divider.png")
     write_png(banner, PROFILE_ASSETS / "banner.png")
     write_png(divider, PROFILE_ASSETS / "divider.png")
