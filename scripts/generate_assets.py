@@ -282,8 +282,7 @@ def make_plain_icon(name, scale=2):
     return scale_nn(sprite, scale)
 
 
-def make_banner():
-    w, h = 256, 80
+def make_banner(w=256, h=80):
     img = new_canvas(w, h, INK)
 
     for x in range(w):
@@ -322,7 +321,7 @@ def make_banner():
         ],
         {".": CLEAR, "c": CREAM},
     )
-    paste(img, robot, 12, 30)
+    paste(img, robot, 12, h // 2 - 10)
 
     title = "YUKUN WANG"
     tw = text_width(title, scale=2, tracking=2)
@@ -388,8 +387,8 @@ def mixed_width(parts):
 
 def make_banner_zh():
     """Chinese nameplate on the same frame, dot grid and robot as the English banner."""
-    w, h = 256, 80
-    img = make_banner().resize((w, h), Image.NEAREST)
+    w, h = 320, 100
+    img = make_banner(w, h).resize((w, h), Image.NEAREST)
     # Clear the English text area, keeping frame, dots and robot.
     for x in range(30, w - 4):
         for y in range(4, h - 4):
@@ -403,20 +402,20 @@ def make_banner_zh():
     tw = sum(g.width for g in glyphs) + 8 * (len(glyphs) - 1)
     tx = (w - tw) // 2 + 10
     for g in glyphs:
-        blit_mask(img, g, tx, 5 + (30 - g.height) // 2, CREAM)
+        blit_mask(img, g, tx, 12 + (30 - g.height) // 2, CREAM)
         tx += g.width + 8
 
-    school = [("UCL ROBOTICS & AI", GOLD, False), ("本硕连读", GOLD, True)]
+    school = [("UCL MENG ROBOTICS & AI", GOLD, False)]
     sw = mixed_width(school)
     sx = (w - sw) // 2 + 10
     for x in range(sx - 4, sx + sw + 4):
-        px(img, x, 39, SLATE)
-    blit_mixed(img, school, sx, 42, line_h=15)
+        px(img, x, 50, SLATE)
+    blit_mixed(img, school, sx, 58, line_h=7)
 
     roles = [("机器人学习", CREAM, True), ("/", CREAM, False), ("具身智能", CREAM, True)]
     rw = mixed_width(roles)
     rx = (w - rw) // 2 + 10
-    blit_mixed(img, roles, rx, 60, line_h=15)
+    blit_mixed(img, roles, rx, 76, line_h=15)
 
     return scale_nn(img, 5)
 
