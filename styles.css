@@ -351,3 +351,26 @@ html[data-lang="en"] #news .news p.zh, html[data-lang="zh"] #news .news p.en { d
 /* Longer plain-language descriptions (2026-10-29). */
 .split-text p strong { color: var(--gold); font-weight: 600; }
 .split-media .card-copy p { line-height: 1.6; }
+
+/* Chinese identity: readable text with a quieter hierarchy. */
+.chinese-banner {
+  width: 100%; padding: 30px 32px 28px;
+  border: 1px solid var(--slate); border-top: 3px solid var(--gold);
+  background: #101115;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.banner-eyebrow { color: var(--muted); font-size: 10px; letter-spacing: .16em; line-height: 1.5; }
+.banner-name { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 18px; margin: 14px 0 20px; font-size: 36px; font-weight: 600; letter-spacing: .12em; line-height: 1.25; }
+.banner-name span { color: var(--muted); font-size: 14px; font-weight: 400; letter-spacing: .02em; }
+.banner-school { color: var(--gold); font-size: 15px; font-weight: 600; line-height: 1.7; }
+.banner-school span { margin-left: 10px; font-size: 13px; font-weight: 400; }
+.banner-focus { margin-top: 7px; color: var(--cream); font-size: 13px; letter-spacing: .06em; }
+.banner-focus span { margin: 0 9px; color: var(--muted); }
+@media (max-width: 520px) {
+  .chinese-banner { padding: 25px 22px; }
+  .banner-name { font-size: 32px; gap: 8px 14px; }
+  .banner-school span { margin-left: 6px; font-size: 12px; }
+}
+@media (max-width: 900px) {
+  .hero .identity-panel { width: 100%; }
+}
