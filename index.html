@@ -10,7 +10,7 @@
 <meta content="https://lbtwyk.github.io/assets/banner.png" property="og:image"/>
 <link href="https://lbtwyk.github.io/" rel="canonical"/>
 <link href="assets/icons/robot.png" rel="icon" type="image/png"/>
-<link href="styles.css?v=photo-20261029" rel="stylesheet"/>
+<link href="styles.css?v=desc-20261029" rel="stylesheet"/>
 </head>
 <body>
 <div class="page">
@@ -98,8 +98,14 @@
 <h3 class="entry-title"><span class="en">Jun — Oct 2026 · UBTECH</span><span class="zh">2026 年 6 月 — 10 月 · 优必选科技</span></h3>
 <p class="en">VLA / Embodied AI Algorithm Intern</p>
 <p class="zh">VLA 具身智能算法实习生</p>
-<p class="en">Can a robot produce its own training data and then learn from its own mistakes? On the UTars dual-arm mobile robot, a planner generates demonstrations and recovers from failures automatically; the VLA policy is then improved RECAP-style from its own rollouts and corrections, and trained to keep moving smoothly despite inference delay (training-time real-time chunking).</p>
-<p class="zh">机器人能不能自己生产训练数据，再从自己的失败中学习？在 UTars 双臂移动机器人上，规划器自动生成示范并从失败中恢复；随后借鉴 RECAP，让 VLA 策略从自身尝试与纠正中继续改进，并通过训练时 RTC 在推理延迟下保持动作流畅。</p>
+<p class="en">Can a robot produce its own training data and then learn from its own mistakes? I worked on this with UTars, UBTECH's dual-arm mobile robot, on a task of moving boxes between shelves of different heights in simulation.</p>
+<p class="en"><strong>Data without teleoperation.</strong> A motion planner moves both arms, the torso and the base together, runs in randomly varied scenes, and keeps only clean runs as demonstrations. If the box tilts or hits the shelf, it notices, plans a fix from where the robot is, and finishes the task; these recoveries become training data too.</p>
+<p class="en"><strong>Learning from its own attempts.</strong> Following RECAP, a separate model learns to judge whether each moment of a run is going well, and the vision-language-action (VLA) policy is retrained to favour the good moments, with the planner taking over when it fails. After two rounds, runs ending with the box placed exactly right rose from 35% to 79%.</p>
+<p class="en"><strong>Moving smoothly while thinking.</strong> The policy needs time to compute its next actions, which can make the robot pause or jerk. With training-time real-time chunking, it learns to continue smoothly from the actions already sent to the robot.</p>
+<p class="zh">机器人能不能自己生产训练数据，再从自己的失败中学习？我在优必选的 UTars 双臂移动机器人上研究这个问题，任务是在仿真中把箱子在不同高度的货架之间搬运。</p>
+<p class="zh"><strong>不靠遥操作采数据。</strong>运动规划器同时协调双臂、躯干和底盘，在随机变化的场景中反复执行，只保留干净的轨迹作为示范。箱子倾斜或碰到货架时，它会发现问题、从当前姿态重新规划补救动作并完成任务，这些恢复过程也会成为训练数据。</p>
+<p class="zh"><strong>从自己的尝试中学习。</strong>借鉴 RECAP，先训练一个模型判断执行过程中每一刻的进展好坏，再让 VLA（视觉-语言-动作）策略重新训练、偏向表现好的动作；策略失败时由规划器接管。两轮后，箱子严格放到位的比例从 35% 提升到 79%。</p>
+<p class="zh"><strong>边思考边流畅动作。</strong>策略计算下一段动作需要时间，容易让机器人停顿或抖动。训练时 RTC（实时分段）让策略学会从已经发给机器人的动作自然接续。</p>
 <figure class="utars"><img alt="UTars dual-arm mobile robot / UTars 双臂移动机器人" height="360" loading="lazy" src="assets/logos/utars.png" width="174"/><figcaption><span class="en">UTars dual-arm mobile robot</span><span class="zh">UTars 双臂移动机器人</span></figcaption></figure>
 </div>
 <div class="split-media">
@@ -110,12 +116,12 @@
 <article class="demo-card" id="planning">
 <div class="card-top"><span><span class="en">PLAN</span><span class="zh">规划</span></span></div>
 <div class="film"><video aria-label="Automated demonstration generation, simulation / 自动规划数采，仿真" controls="" height="480" loop="" muted="" playsinline="" poster="assets/posters/planning.jpg" preload="none" width="1280"><source src="assets/videos/planning.mp4" type="video/mp4"/></video></div>
-<div class="card-copy"><h4><span class="en">Coordinated planning at scale</span><span class="zh">全身协同规划与自动数采</span></h4><p class="en">Complete shelf transfers without step-by-step teleoperation.</p><p class="zh">自动完成货架搬运，替代逐步人工遥操作。</p></div>
+<div class="card-copy"><h4><span class="en">Coordinated planning at scale</span><span class="zh">全身协同规划与自动数采</span></h4><p class="en">The planner carries the box between shelves by moving both arms, the torso and the base together. Scenes vary on every run and each result is checked automatically, so demonstrations need no human teleoperation.</p><p class="zh">规划器协调双臂、躯干和底盘，把箱子在货架之间搬运。每次执行的场景都会随机变化，结果自动检查，示范无需人工遥操作。</p></div>
 </article>
 <article class="demo-card" id="recovery">
 <div class="card-top"><span><span class="en">RECOVER</span><span class="zh">恢复</span></span></div>
 <div class="film"><video aria-label="Autonomous recovery during demonstration collection, simulation / 数采过程自主纠错，仿真" controls="" height="624" loop="" muted="" playsinline="" poster="assets/posters/recovery.jpg?v=task-cut-2" preload="none" width="1280"><source src="assets/videos/recovery.mp4?v=task-cut-2" type="video/mp4"/></video></div>
-<div class="card-copy"><h4><span class="en">Recover and resume the task</span><span class="zh">自主恢复，续接原任务</span></h4><p class="en">Retreat, replan, and finish placement after shelf contact.</p><p class="zh">碰撞后退让、重规划，继续完成放置。</p></div>
+<div class="card-copy"><h4><span class="en">Recover and resume the task</span><span class="zh">自主恢复，续接原任务</span></h4><p class="en">The box touches the shelf while being placed. The system detects it, backs off, replans from the current pose and resumes the original task; the recovery is kept as training data.</p><p class="zh">放置时箱子碰到货架。系统检测到异常后先退让，再从当前姿态重新规划并续接原任务，这段恢复过程也会保留为训练数据。</p></div>
 </article>
 </div>
 </section>
@@ -125,12 +131,12 @@
 <article class="demo-card" id="upper">
 <div class="card-top"><span><span class="en">UPPER SHELF</span><span class="zh">上层执行</span></span></div>
 <div class="film"><video aria-label="Upper-shelf learned policy demonstration, simulation / 上层模型自主执行，仿真" controls="" height="624" loop="" muted="" playsinline="" poster="assets/posters/upper.jpg?v=latest-upper-0604" preload="none" width="1280"><source src="assets/videos/upper.mp4?v=latest-upper-0604" type="video/mp4"/></video></div>
-<div class="card-copy"><h4><span class="en">Visual policy for upper-shelf placement</span><span class="zh">视觉策略驱动上层放置</span></h4><p class="en">Use vision to place and release the box on the upper shelf.</p><p class="zh">根据视觉观测，在上层货架放置并释放箱子。</p></div>
+<div class="card-copy"><h4><span class="en">Visual policy for upper-shelf placement</span><span class="zh">视觉策略驱动上层放置</span></h4><p class="en">The trained policy runs on its own from camera images, with no planner: it lifts the box, places it on the upper shelf and lets go.</p><p class="zh">训练好的策略只根据相机画面自主执行，不再依赖规划器：抬起箱子，放上上层货架并松手。</p></div>
 </article>
 <article class="demo-card" id="lower">
 <div class="card-top"><span><span class="en">LOWER SHELF</span><span class="zh">下层执行</span></span></div>
 <div class="film"><video aria-label="Lower-shelf learned policy demonstration, simulation / 下层模型自主执行，仿真" controls="" height="624" loop="" muted="" playsinline="" poster="assets/posters/lower.jpg?v=task-cut-2" preload="none" width="1280"><source src="assets/videos/lower.mp4?v=task-cut-2" type="video/mp4"/></video></div>
-<div class="card-copy"><h4><span class="en">Whole-body coordination across shelf levels</span><span class="zh">全身协调完成跨层搬运</span></h4><p class="en">Coordinate arms, torso, and base to reach the lower shelf.</p><p class="zh">协调双臂、躯干与底盘，完成下层放置。</p></div>
+<div class="card-copy"><h4><span class="en">Whole-body coordination across shelf levels</span><span class="zh">全身协调完成跨层搬运</span></h4><p class="en">Reaching the lower shelf needs the arms, torso and base to move together. The policy coordinates all of them from camera images and sets the box down in place.</p><p class="zh">够到下层货架需要双臂、躯干和底盘一起配合。策略根据相机画面协调全身，把箱子放到位。</p></div>
 </article>
 </div>
 </section>
@@ -140,13 +146,15 @@
 <div class="split-text">
 <div class="org-logos"><span class="org-chip square"><img alt="Tsinghua University 清华大学" height="160" src="assets/logos/tsinghua.png" width="160"/></span><span class="org-chip zgca"><img alt="Beijing Zhongguancun Academy 北京中关村学院" height="72" src="assets/logos/zgca.png" width="279"/></span></div>
 <h3 class="entry-title"><span class="en">Jun — Oct 2025 · Tsinghua IIIS × Zhongguancun Academy</span><span class="zh">2025 年 6 月 — 10 月 · 清华 IIIS × 中关村学院</span></h3>
-<p class="en">Learning manipulation from real and simulated experience. Research on Diffusion Policy deployment and OpenVLA sim-real co-training for data-efficient adaptation.</p>
-<p class="zh">让机器人从虚实经验中学习操作。研究 Diffusion Policy 真机部署与 OpenVLA 虚实联合训练，提升低样本适应能力。</p>
+<p class="en">How can a robot learn tabletop manipulation when real demonstrations are scarce? I first trained Diffusion Policy on real-robot data, then built a simulated copy of the real workspace (a digital twin) to produce demonstrations at scale.</p>
+<p class="en">The main work combined the two for OpenVLA-family models: train on mixed real and simulated demonstrations, then keep improving in simulation with reinforcement learning, while the real demonstrations keep the policy close to what works on the real robot. With only 50 real demonstrations, early real-robot tests reached 68.75% success, versus 6.25% when training on real data alone.</p>
+<p class="zh">真机示范很少时，机器人怎样学会桌面操作？我先用真机数据训练 Diffusion Policy，再在仿真中搭建与真实场景一致的“数字孪生”，大量生成示范数据。</p>
+<p class="zh">主要工作是把两者结合起来训练 OpenVLA 系列模型：先用虚实混合示范训练，再在仿真中用强化学习继续提升，同时用真实示范约束策略，避免它在真机上的能力退化。只用 50 条真机示范时，初步真机测试成功率达到 68.75%，而只用真机数据训练为 6.25%。</p>
 </div>
 <div class="split-media">
 <div class="demo-grid tsinghua-demos">
-<article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Real-robot manipulation / 真机多任务执行" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-tasks.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-tasks.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Real-robot manipulation</span><span class="zh">真机多任务执行</span></h4><p class="en">Pick, place, push, and operate drawers.</p><p class="zh">抓取、放置、推动与抽屉开合。</p></div></article>
-<article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Generalization comparison / 泛化能力对比" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-generalization.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-generalization.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Generalization beyond training conditions</span><span class="zh">训练场景外的泛化表现</span></h4><p class="en">Compare co-training strategies on familiar and unseen conditions.</p><p class="zh">比较不同联合训练策略在已见与未见条件下的表现。</p></div></article>
+<article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Real-robot manipulation / 真机多任务执行" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-tasks.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-tasks.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Real-robot manipulation</span><span class="zh">真机多任务执行</span></h4><p class="en">Several tabletop tasks on the real robot, including picking and placing, pushing a cube and opening and closing drawers. Clips are sped up.</p><p class="zh">真机上的多种桌面任务，包括抓取放置、推方块和开关抽屉。视频为加速播放。</p></div></article>
+<article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Generalization comparison / 泛化能力对比" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-generalization.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-generalization.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Generalization beyond training conditions</span><span class="zh">训练场景外的泛化表现</span></h4><p class="en">Compares training on real data only, ordinary sim-real co-training, and co-training with reinforcement learning in simulation, on familiar setups and on objects and conditions not seen in training.</p><p class="zh">对比只用真机数据、普通虚实联合训练，以及加入仿真强化学习的联合训练，分别在熟悉场景和训练中没见过的物体与条件下测试。</p></div></article>
 </div>
 </div>
 </article>

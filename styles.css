@@ -348,3 +348,6 @@ html[data-lang="en"] #news .news p.zh, html[data-lang="zh"] #news .news p.en { d
 .org-chip.zgca { padding: 12px 14px; }
 .org-chip.square { padding: 2px; }
 @media (max-width: 520px) { .org-chip { height: 40px; } .org-chip.zgca { padding: 10px 12px; } }
+/* Longer plain-language descriptions (2026-10-29). */
+.split-text p strong { color: var(--gold); font-weight: 600; }
+.split-media .card-copy p { line-height: 1.6; }
