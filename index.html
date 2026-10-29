@@ -10,7 +10,7 @@
 <meta content="https://lbtwyk.github.io/assets/banner.png" property="og:image"/>
 <link href="https://lbtwyk.github.io/" rel="canonical"/>
 <link href="assets/icons/robot.png" rel="icon" type="image/png"/>
-<link href="styles.css?v=academic-20261029" rel="stylesheet"/>
+<link href="styles.css?v=wide-20261029" rel="stylesheet"/>
 </head>
 <body>
 <div class="page">
@@ -20,6 +20,8 @@
 <button aria-pressed="false" data-set-lang="zh" type="button">中</button>
 </div>
 </header>
+<div class="hero">
+<div class="hero-left">
 <div class="identity-panel">
 <h1 class="sr-only">Yukun Wang / 王宇堃</h1>
 <img alt="Yukun Wang / 王宇堃 — UCL MEng Robotics &amp; AI, robot learning, embodied AI" class="banner" height="400" src="assets/banner.png" width="1280"/>
@@ -38,7 +40,12 @@
 </a>
 </nav>
 </div>
-<img alt="" class="divider" height="15" src="assets/divider.png" width="480"/>
+<section aria-labelledby="education-title" id="education">
+<h2 id="education-title"><img alt="" height="18" src="assets/icons/plain/research.png" width="18"/><span class="en">Education</span><span class="zh">教育</span></h2>
+<p class="edu-line"><span class="when">2023 — 2027</span> <span class="en">University College London · MEng (integrated master's) Robotics &amp; AI</span><span class="zh">伦敦大学学院（UCL）· Robotics &amp; AI 本硕连读（MEng 硕士学位）</span></p>
+</section>
+</div>
+<div class="hero-right">
 <section id="about">
 <h2>
 <img alt="" height="18" src="assets/icons/plain/about.png" width="18"/>
@@ -52,40 +59,47 @@
 <section aria-labelledby="news-title" id="news">
 <h2 id="news-title"><img alt="" height="18" src="assets/icons/plain/news.png" width="18"/><span class="en">News</span><span class="zh">动态</span></h2>
 <ul class="news">
-<li><div><p class="when">2026.10</p><p class="en">AHEADance dances on a physical Unitree G1 to live music heard through a microphone.</p><p class="zh">AHEADance 在 Unitree G1 真机上运行，通过麦克风听现场音乐起舞。</p></div></li>
-<li><div><p class="when">2026.06 — 2026.10</p><p class="en">VLA / embodied AI intern at UBTECH, working on robots that collect their own data and learn from their own mistakes.</p><p class="zh">在优必选任 VLA 具身智能算法实习生，研究让机器人自己采集数据、从自己的失败中学习。</p></div></li>
-<li><div><p class="when">2025.06 — 2025.10</p><p class="en">Research assistant at Tsinghua IIIS × Zhongguancun Academy on sim-real co-training.</p><p class="zh">在清华交叉信息研究院 × 中关村学院任研究助理，研究虚实联合训练。</p></div></li>
+<li><p class="when">2026.10</p><p class="en">AHEADance dances on a physical Unitree G1 to live music heard through a microphone.</p><p class="zh">AHEADance 在 Unitree G1 真机上运行，通过麦克风听现场音乐起舞。</p></li>
+<li><p class="when">2026.06 — 2026.10</p><p class="en">VLA / embodied AI intern at UBTECH, working on robots that collect their own data and learn from their own mistakes.</p><p class="zh">在优必选任 VLA 具身智能算法实习生，研究让机器人自己采集数据、从自己的失败中学习。</p></li>
+<li><p class="when">2025.06 — 2025.10</p><p class="en">Research assistant at Tsinghua IIIS × Zhongguancun Academy on sim-real co-training.</p><p class="zh">在清华交叉信息研究院 × 中关村学院任研究助理，研究虚实联合训练。</p></li>
 </ul>
 </section>
+</div>
+</div>
+<img alt="" class="divider" height="15" src="assets/divider.png" width="480"/>
 <section aria-labelledby="projects-title" id="projects">
 <h2 id="projects-title"><img alt="" height="18" src="assets/icons/plain/now.png" width="18"/><span class="en">Research</span><span class="zh">研究</span></h2>
 <span id="foredance" aria-hidden="true"></span>
-<article id="aheadance">
-<h3 class="entry-title"><span class="en">AHEADance · Streaming Humanoid Motion Generation</span><span class="zh">AHEADance · 人形机器人流式动作生成</span></h3>
-<p class="project-status"><span class="en">Research in progress · UCL Humanoid Robotics Lab</span><span class="zh">研究进行中 · UCL Humanoid Robotics Lab</span></p>
-<p class="en">A robot dancing to live music only hears the past, yet has to commit each move before the matching music arrives. AHEADance listens ahead with a music forecaster, generates motion chunk by chunk, and learns to continue from its own output so long dances do not fade into stillness. On a Unitree G1 with SONIC whole-body control, it produces 0.53 s of motion in about 90 ms. Next: text and keyframe guidance.</p>
-<p class="zh">机器人随现场音乐跳舞时只能听到已经播放的部分，却必须在对应音乐到来之前做出动作。AHEADance 借助音乐预测“提前听”，逐段生成动作，并学会从自己生成的动作继续往下跳，避免长时间跳舞后动作逐渐停滞。接入 SONIC 全身控制后，在 Unitree G1 上约 90 毫秒即可生成 0.53 秒动作。下一步将加入文本与关键帧引导。</p>
+<article class="feature" id="aheadance">
+<div class="feature-media">
 <div class="demo-card foredance-demo">
 <div class="card-top"><span class="en">SONG SWITCHING</span><span class="zh">切歌展示</span><span>60 s</span></div>
 <div class="film"><video controls playsinline preload="metadata" data-manual-play poster="assets/posters/foredance-song-switch.jpg?v=20261015" width="1920" height="1080" aria-label="AHEADance song-switching motion generation / AHEADance 切歌动作生成"><source src="assets/videos/foredance-song-switch.mp4?v=20261015" type="video/mp4"></video></div>
 <div class="card-copy"><h4><span class="en">Changing music, continuous motion</span><span class="zh">音乐切换，动作连续生成</span></h4><p class="en">60-second simulation demo: generated motion and SONIC tracking across song changes. Play with sound.</p><p class="zh">60 秒仿真展示：切歌过程中的动作生成与 SONIC 跟踪。点击播放，结合音乐观看。</p></div>
 </div>
+</div>
+<div class="feature-text">
+<h3 class="entry-title"><span class="en">AHEADance · Streaming Humanoid Motion Generation</span><span class="zh">AHEADance · 人形机器人流式动作生成</span></h3>
+<p class="project-status"><span class="en">Research in progress · UCL Humanoid Robotics Lab</span><span class="zh">研究进行中 · UCL Humanoid Robotics Lab</span></p>
+<p class="en">A robot dancing to live music only hears the past, yet has to commit each move before the matching music arrives. AHEADance listens ahead with a music forecaster, generates motion chunk by chunk, and learns to continue from its own output so long dances do not fade into stillness. On a Unitree G1 with SONIC whole-body control, it produces 0.53 s of motion in about 90 ms. Next: text and keyframe guidance.</p>
+<p class="zh">机器人随现场音乐跳舞时只能听到已经播放的部分，却必须在对应音乐到来之前做出动作。AHEADance 借助音乐预测“提前听”，逐段生成动作，并学会从自己生成的动作继续往下跳，避免长时间跳舞后动作逐渐停滞。接入 SONIC 全身控制后，在 Unitree G1 上约 90 毫秒即可生成 0.53 秒动作。下一步将加入文本与关键帧引导。</p>
+</div>
 </article>
 </section>
 <section aria-labelledby="internships-title" id="internships">
 <h2 id="internships-title"><img alt="" height="18" src="assets/icons/plain/news.png" width="18"/><span class="en">Internships</span><span class="zh">实习经历</span></h2>
-<article class="internship" id="ubtech">
+<article class="internship split" id="ubtech">
+<div class="split-text" id="work">
 <h3 class="entry-title"><span class="en">Jun — Oct 2026 · UBTECH</span><span class="zh">2026 年 6 月 — 10 月 · 优必选科技</span></h3>
 <p class="en">VLA / Embodied AI Algorithm Intern</p>
 <p class="zh">VLA 具身智能算法实习生</p>
-<div id="work">
 <p class="en">Can a robot produce its own training data and then learn from its own mistakes? On the UTars dual-arm mobile robot, a planner generates demonstrations and recovers from failures automatically; the VLA policy is then improved RECAP-style from its own rollouts and corrections, and trained to keep moving smoothly despite inference delay (training-time real-time chunking).</p>
 <p class="zh">机器人能不能自己生产训练数据，再从自己的失败中学习？在 UTars 双臂移动机器人上，规划器自动生成示范并从失败中恢复；随后借鉴 RECAP，让 VLA 策略从自身尝试与纠正中继续改进，并通过训练时 RTC 在推理延迟下保持动作流畅。</p>
+</div>
+<div class="split-media">
 <div id="demos"></div>
 <section aria-labelledby="collection-title" class="demo-group" id="collection">
 <h3 id="collection-title"><span class="en">Automated Demonstration Generation</span><span class="zh">自动化示范生成</span></h3>
-<p class="group-description en">Generate demonstrations through coordinated planning and autonomous recovery.</p>
-<p class="group-description zh">通过协同规划与失败恢复，自动生成机器人示范。</p>
 <div class="demo-grid">
 <article class="demo-card" id="planning">
 <div class="card-top"><span><span class="en">PLAN</span><span class="zh">规划</span></span></div>
@@ -101,8 +115,6 @@
 </section>
 <section aria-labelledby="inference-title" class="demo-group" id="inference">
 <h3 id="inference-title"><span class="en">Closed-Loop VLA Execution</span><span class="zh">VLA 闭环自主执行</span></h3>
-<p class="group-description en">Task instructions and visual observations drive closed-loop actions in simulation.</p>
-<p class="group-description zh">根据任务指令与视觉观测，在仿真中闭环执行。</p>
 <div class="demo-grid">
 <article class="demo-card" id="upper">
 <div class="card-top"><span><span class="en">UPPER SHELF</span><span class="zh">上层执行</span></span></div>
@@ -118,21 +130,19 @@
 </section>
 </div>
 </article>
-<article class="internship" id="tsinghua">
+<article class="internship split" id="tsinghua">
+<div class="split-text">
 <h3 class="entry-title"><span class="en">Jun — Oct 2025 · Tsinghua IIIS × Zhongguancun Academy</span><span class="zh">2025 年 6 月 — 10 月 · 清华 IIIS × 中关村学院</span></h3>
 <p class="en">Learning manipulation from real and simulated experience. Research on Diffusion Policy deployment and OpenVLA sim-real co-training for data-efficient adaptation.</p>
 <p class="zh">让机器人从虚实经验中学习操作。研究 Diffusion Policy 真机部署与 OpenVLA 虚实联合训练，提升低样本适应能力。</p>
+</div>
+<div class="split-media">
 <div class="demo-grid tsinghua-demos">
 <article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Real-robot manipulation / 真机多任务执行" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-tasks.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-tasks.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Real-robot manipulation</span><span class="zh">真机多任务执行</span></h4><p class="en">Pick, place, push, and operate drawers.</p><p class="zh">抓取、放置、推动与抽屉开合。</p></div></article>
 <article class="demo-card"><div class="card-top"><span>OpenVLA · Sim-Real Co-Training</span><span class="en">Real robot</span><span class="zh">真机演示</span></div><div class="film"><video aria-label="Generalization comparison / 泛化能力对比" controls="" height="544" loop="" muted="" playsinline="" poster="assets/posters/tsinghua-generalization.jpg" preload="none" width="960"><source src="assets/videos/tsinghua-generalization.mp4" type="video/mp4"/></video></div><div class="card-copy"><h4><span class="en">Generalization beyond training conditions</span><span class="zh">训练场景外的泛化表现</span></h4><p class="en">Compare co-training strategies on familiar and unseen conditions.</p><p class="zh">比较不同联合训练策略在已见与未见条件下的表现。</p></div></article>
 </div>
+</div>
 </article>
-</section>
-<section aria-labelledby="education-title" id="education">
-<h2 id="education-title"><img alt="" height="18" src="assets/icons/plain/research.png" width="18"/><span class="en">Education</span><span class="zh">教育</span></h2>
-<p class="entry-title"><span class="en">2023 — 2027 · University College London</span><span class="zh">2023 — 2027 · 伦敦大学学院（UCL）</span></p>
-<p class="en">MEng (integrated master's) Robotics &amp; Artificial Intelligence</p>
-<p class="zh">Robotics &amp; Artificial Intelligence 本硕连读（MEng 硕士学位）</p>
 </section>
 </div>
 <script src="script.js?v=academic-20261029"></script>

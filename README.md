@@ -52,3 +52,7 @@ Public project name is `aheadance`. Chinese and English copy follows the approve
 ## Academic structure (2026-10-29)
 
 Keeps the original pixel-art banner, gold-and-cream palette and demo cards. Adds a News section and an Education section, renames Projects to Research, and rewrites the About, AHEADance and UBTECH introductions as short research questions rather than CV bullets. Degree shown as integrated master's (MEng) / 本硕连读. AHEADance copy does not add the manuscript title or component names (paper under double-anonymous review). All videos, analytics and anchors (`#aheadance`, `#foredance`, `#ubtech`, `#tsinghua`, demo ids) are retained. English and Chinese checked at 1280 px and 390 px with no horizontal overflow; all seven videos load.
+
+## Wide layout (2026-10-29)
+
+Same palette, pixel banner and demo cards, rearranged to cut scrolling: a two-column header (identity and education beside about and news), AHEADance with its video beside the text, and each internship with text on the left and its demos on the right (UBTECH 2×2, Tsinghua side by side). Below 900 px everything stacks in reading order (identity, about, news, education; project text before its video). Checked at 1440, 1024, 820 and 390 px in both languages: no horizontal overflow, all anchors present, all seven videos load.
