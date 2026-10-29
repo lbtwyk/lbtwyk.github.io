@@ -1,6 +1,6 @@
 # Yukun Wang — research portfolio
 
-Bilingual academic homepage: light layout (with automatic dark mode), portrait and short bio, news, research, experience, education and other projects. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
+Bilingual personal research homepage preserving the original pixel-art banner, serif typography, compact layout, and gold-and-cream palette, with news, research, internships and education. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
 
 Static HTML, CSS, and JavaScript; no build step. English is the default. The language control saves the visitor's choice; `?lang=zh` and `?lang=en` provide direct links.
 
@@ -49,6 +49,6 @@ Replaced the ForeDance placeholder with the user-supplied `train_switch_slow_a_s
 
 Public project name is `aheadance`. Chinese and English copy follows the approved CV, with concise streaming generation and whole-body control descriptions, 90.6 ms generation per 0.53 s motion and user-confirmed ~0.8 s real-robot end-to-end latency. Text/keyframe conditioning remains planned. The existing demo is labelled simulation; all media and analytics are retained. `#aheadance` is the current anchor and `#foredance` remains compatible with existing CV links.
 
-## Academic redesign (2026-10-29)
+## Academic structure (2026-10-29)
 
-Replaced the dark pixel-art portfolio with a standard academic homepage layout. Content follows the current CV: degree shown as MEng (integrated master's) / 本硕连读; UBTECH copy covers the demonstration pipeline, failure recovery planning, RECAP-style policy improvement and training-time RTC with user-confirmed results; Tsinghua copy summarises real-robot data, Diffusion Policy, digital twin and OpenVLA co-training. AHEADance copy stays at the previously public level and does not add the manuscript title or component names, because the paper is under double-anonymous review. Portrait (`assets/portrait.jpg`) is taken from the CV photo. All videos, posters, analytics and anchors (`#aheadance`, `#foredance`, `#ubtech`, `#tsinghua` and the demo ids) are retained. English and Chinese checked at 1280 px and 390 px with no horizontal overflow; all seven videos load.
+Keeps the original pixel-art banner, gold-and-cream palette and demo cards. Adds a News section and an Education section, renames Projects to Research, and rewrites the About, AHEADance and UBTECH introductions as short research questions rather than CV bullets. Degree shown as integrated master's (MEng) / 本硕连读. AHEADance copy does not add the manuscript title or component names (paper under double-anonymous review). All videos, analytics and anchors (`#aheadance`, `#foredance`, `#ubtech`, `#tsinghua`, demo ids) are retained. English and Chinese checked at 1280 px and 390 px with no horizontal overflow; all seven videos load.
