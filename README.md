@@ -1,6 +1,6 @@
 # Yukun Wang — research portfolio
 
-Bilingual personal research homepage preserving the original pixel-art banner, serif typography, compact layout, and gold-and-cream palette, with news, research, internships and education. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
+Bilingual personal research homepage preserving the original pixel-art banner, system sans-serif typography, compact layout, and gold-and-cream palette, with news, research, internships and education. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
 
 Static HTML, CSS, and JavaScript; no build step. English is the default. The language control saves the visitor's choice; `?lang=zh` and `?lang=en` provide direct links.
 
@@ -69,3 +69,7 @@ Same palette, pixel banner and demo cards, rearranged to cut scrolling: a two-co
 ## Alternative light design (2026-11-06)
 
 `/explore/?lang=zh` is an independent, Apple-inspired light design for review; the pixel homepage remains unchanged. The final direction is a professional academic page with restrained type sizes, fine dividers, subtle rounded panels, and the full original Chinese/English section text and seven videos. No promotional slogans or oversized headings. `/compare/` embeds both versions with links to their full pages. Both preview pages request no indexing. The alternate language choice uses separate storage and videos play on request, with one playing at a time. Existing media assets are shared rather than duplicated.
+
+## Main-site typography (2026-11-06)
+
+Kept the pixel design as the main site. Body text, headings, labels and controls now use the common system sans-serif font stack (Apple system / Segoe UI, PingFang SC / Microsoft YaHei, Arial fallback). Banner images, content, colors and layout are unchanged. The light alternative remains separate.

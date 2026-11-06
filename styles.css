@@ -1,4 +1,5 @@
 :root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   --ink: #0d0d10;
   --cream: #e8e0d0;
   --gold: #c4a574;
@@ -20,7 +21,7 @@ body {
 }
 
 body {
-  font-family: "Iowan Old Style", Palatino, "Songti SC", "PingFang SC", Georgia, serif;
+  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.65;
 }
@@ -57,7 +58,7 @@ a:hover {
 
 .lang button {
   appearance: none;
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-family: var(--font-sans);
   font-size: 11px;
   letter-spacing: 0.14em;
   padding: 8px 12px;
@@ -96,7 +97,7 @@ h1 {
   text-align: center;
   color: var(--gold);
   font-size: 13px;
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-family: var(--font-sans);
   letter-spacing: 0.08em;
 }
 
@@ -119,7 +120,7 @@ h1 {
   align-items: center;
   gap: 8px;
   color: var(--cream);
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-family: var(--font-sans);
   font-size: 12px;
   letter-spacing: 0.12em;
   line-height: 1;
@@ -157,7 +158,7 @@ h2 {
   align-items: center;
   gap: 8px;
   margin-bottom: 12px;
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -177,7 +178,7 @@ section p,
 
 .keywords {
   margin-top: 12px;
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-family: var(--font-sans);
   font-size: 12px;
   letter-spacing: 0.03em;
   color: var(--gold);
@@ -203,7 +204,7 @@ section p,
 }
 
 .when {
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-family: var(--font-sans);
   font-size: 12px;
   letter-spacing: 0.04em;
   color: var(--gold);
@@ -234,7 +235,7 @@ html[data-lang="zh"] body {
 a:focus-visible, button:focus-visible, video:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
 .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .demo-card { border: 1px solid var(--slate); min-width: 0; scroll-margin-top: 20px; }
-.card-top { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 10px; letter-spacing: .06em; color: var(--gold); }
+.card-top { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; font-family: var(--font-sans); font-size: 10px; letter-spacing: .06em; color: var(--gold); }
 .film { background: #000; }
 .film video { display: block; width: 100%; height: auto; aspect-ratio: 2.05; object-fit: contain; }
 .card-copy { padding: 14px; }
@@ -248,7 +249,7 @@ h4 { font-size: 16px; font-weight: 600; line-height: 1.45; margin-bottom: 10px; 
 }
 
 .demo-group { margin-top: 24px; }
-.demo-group h3 { color: var(--gold); font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; font-weight: 600; line-height: 1.6; margin-bottom: 8px; }
+.demo-group h3 { color: var(--gold); font-family: var(--font-sans); font-size: 13px; font-weight: 600; line-height: 1.6; margin-bottom: 8px; }
 .group-description { font-size: 14px; margin-bottom: 14px; }
 
 .entry-title { font-size: 17px; font-weight: 600; margin-bottom: 8px; line-height: 1.5; }
@@ -330,7 +331,7 @@ html[data-lang="en"] #news .news p.zh, html[data-lang="zh"] #news .news p.en { d
 .org-chip img { display: block; height: 100%; width: auto; mix-blend-mode: multiply; }
 .utars { margin-top: 18px; display: flex; align-items: flex-end; gap: 14px; }
 .utars img { display: block; height: 180px; width: auto; }
-.utars figcaption { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--muted); padding-bottom: 6px; }
+.utars figcaption { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.06em; color: var(--muted); padding-bottom: 6px; }
 @media (max-width: 900px) {
   .hero .profile { order: 2; margin-top: 24px; }
   .hero #about { order: 3; }
