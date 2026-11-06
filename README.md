@@ -1,6 +1,6 @@
 # Yukun Wang — research portfolio
 
-Bilingual personal research homepage preserving the original pixel-art banner, system sans-serif typography, compact layout, and gold-and-cream palette, with news, research, internships and education. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
+Bilingual personal research homepage preserving the original pixel-art banner, classic serif typography, compact layout, and gold-and-cream palette, with news, research, internships and education. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
 
 Static HTML, CSS, and JavaScript; no build step. English is the default. The language control saves the visitor's choice; `?lang=zh` and `?lang=en` provide direct links.
 
@@ -72,4 +72,4 @@ Same palette, pixel banner and demo cards, rearranged to cut scrolling: a two-co
 
 ## Main-site typography (2026-11-06)
 
-Kept the pixel design as the main site. Body text, headings, labels and controls now use the common system sans-serif font stack (Apple system / Segoe UI, PingFang SC / Microsoft YaHei, Arial fallback). Banner images, content, colors and layout are unchanged. The light alternative remains separate.
+Kept the pixel design as the main site. After comparing three font previews, the user selected C: Georgia for Latin text, Songti SC for Chinese on macOS, SimSun fallback, then generic serif. The selected preview’s regular body weight, font smoothing and heading weights are applied. Banner images, content, colors and layout are unchanged. The light alternative remains separate.
