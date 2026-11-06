@@ -65,3 +65,7 @@ Same palette, pixel banner and demo cards, rearranged to cut scrolling: a two-co
 ## Chinese banner (2026-10-29)
 
 `assets/banner-zh.png` is the Chinese nameplate (王宇堃 · UCL Robotics & AI 本硕连读 · 机器人学习 / 具身智能) on the same frame, dot grid and robot. It is drawn by `make_banner_zh()` in `scripts/generate_assets.py` with macOS's built-in 16 px bitmap font (`NISC18030.ttf`, no antialiasing) so the glyphs stay true pixels; the page shows it in place of `banner.png` when Chinese is selected.
+
+## Alternative light design (2026-11-06)
+
+`/explore/?lang=zh` is an independent, Apple-inspired light design for review; the pixel homepage remains unchanged. The final direction is a professional academic page with restrained type sizes, fine dividers, subtle rounded panels, and the full original Chinese/English section text and seven videos. No promotional slogans or oversized headings. `/compare/` embeds both versions with links to their full pages. Both preview pages request no indexing. The alternate language choice uses separate storage and videos play on request, with one playing at a time. Existing media assets are shared rather than duplicated.
