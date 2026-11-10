@@ -22,6 +22,8 @@ The original recordings are unchanged. Recovery belongs to the demonstration col
 
 The technical report dated September 23, 2026 takes precedence over older resume stage scores for the UBTECH project. Education and research experience follow the latest resume. No private report, model, dataset, or resume PDF is published here.
 
+AHEADance (Research section) shows the project's YouTube video and `assets/videos/aheadance-real-song-switch.mp4`: a real Unitree G1 switching and stopping songs through a microphone, re-encoded for the web (960×716, H.264 CRF 25, mono AAC 96 kb/s, 80 s, about 14 MB) from the 136 MB original. The older simulation clip `foredance-song-switch.mp4` is no longer shown.
+
 ## Collection and inference
 
 Collection is the fully automated planner/collector: cross-shelf demonstration generation and shelf-edge collision recovery. The recovery film uses the accepted r04d lower-insertion collision trajectory, preserving contact, retreat, replanning, and final release.

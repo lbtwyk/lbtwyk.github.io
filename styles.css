@@ -362,3 +362,18 @@ html[data-lang="en"] #news .news p.zh, html[data-lang="zh"] #news .news p.en { d
 /* Selected font preview C: classic serif type with restrained headings. */
 h2, h3, h4 { font-weight: 500; }
 strong { font-weight: 500; }
+
+/* AHEADance feature (2026-11-10): header, three key points, two real-robot films. */
+.feature-v2 { display: grid; gap: 20px; }
+.feature-head .project-status { margin-bottom: 6px; }
+.project-links { display: flex; gap: 18px; font-size: 13px; margin: 0; }
+.feature-points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.point { border: 1px solid var(--slate); padding: 14px 16px; }
+.point p:not(.point-label) { font-size: 14px; line-height: 1.7; margin: 0; }
+.point-label { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11px; letter-spacing: .08em; color: var(--gold); margin: 0 0 8px; }
+.feature-demos { grid-template-columns: 1fr 1fr; }
+.feature-demos .film iframe, .feature-demos .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; object-fit: contain; }
+.feature-demos .card-copy { padding: 12px 14px; }
+@media (max-width: 860px) {
+  .feature-points, .feature-demos { grid-template-columns: 1fr; }
+}
