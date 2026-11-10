@@ -3,7 +3,7 @@
   let saved;
   try { saved = localStorage.getItem(storageKey); } catch (_) {}
   const query = new URLSearchParams(location.search).get('lang');
-  const initial = ['en', 'zh'].includes(query) ? query : saved === 'zh' ? 'zh' : 'en';
+  const initial = ['en', 'zh'].includes(query) ? query : saved === 'en' ? 'en' : 'zh';
   function setLanguage(lang) {
     document.documentElement.dataset.lang = lang;
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';

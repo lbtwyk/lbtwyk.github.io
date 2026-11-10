@@ -1,8 +1,8 @@
 # Yukun Wang — research portfolio
 
-Bilingual personal research homepage preserving the original pixel-art banner, classic serif typography, compact layout, and gold-and-cream palette, with news, research, internships and education. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
+Bilingual personal research homepage in a light, Apple-style design: ivory background, white cards, a single blue accent, pill buttons, serif headings and system sans-serif body text. The pixel nameplate (`assets/nameplate-*.png`, recoloured from the original pixel banner) sits above a collage of project stills (`assets/collage-*.jpg`). Sections run News and Education, Paper (AHEADance), then Internships. Published at [lbtwyk.github.io](https://lbtwyk.github.io/) using GitHub Pages from the root of `main`.
 
-Static HTML, CSS, and JavaScript; no build step. English is the default. The language control saves the visitor's choice; `?lang=zh` and `?lang=en` provide direct links.
+Static HTML, CSS, and JavaScript; no build step. Chinese is the default. The language control saves the visitor's choice; `?lang=zh` and `?lang=en` provide direct links.
 
 ## Local preview
 
